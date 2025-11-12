@@ -118,8 +118,7 @@ function IPAChart() {
             </tr>
             <tr>
                 <td>plosive</td>
-                <IPAEntry value="" />
-                <IPAEntry value="" />
+                <IPAEntry value="" colSpan="2" />
                 <IPAEntry value="p" />
                 <IPAEntry value="b" />
                 <IPAEntry value="t" colSpan="3" />
@@ -156,6 +155,11 @@ function IPAChart() {
                 <IPAEntry value="ʁ" />
                 <IPAEntry value="h" />
                 <IPAEntry value="ɦ" />
+            </tr>
+            <tr>
+                <td colSpan="5"></td>
+                <IPAEntry value="ɬ" colSpan="3" />
+                <IPAEntry value="ɮ" colSpan="3" />
             </tr>
             <tr>
                 <td>approximant</td>
