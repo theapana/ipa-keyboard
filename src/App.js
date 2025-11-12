@@ -1,5 +1,5 @@
 export default function App()  {
     return <div>
-        <h1>IPA Keyboard Design</h1>
+        <h1>Home</h1>
     </div>;
 }

@@ -4,6 +4,7 @@ import Key from "./Key.js";
 
 export default function IPAChart() {
     return <div>
+        <h1>IPA Chart</h1>
         <PulmonicChart />
         <VowelChart />
         <NonPulmonicChart />
