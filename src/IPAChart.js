@@ -41,12 +41,29 @@ export default function IPAChart() {
     </div>;
 }
 
+const glyph_info = {
+    "p": {
+        "glyph-name": "latin 'p'",
+        "description": "voiceless bilabial plosive",
+        "tipa-code": "p",
+    },
+    "b": {
+        "glyph-name": "latin 'b'",
+        "description": "voiceed bilabial plosive",
+        "tipa-code": "b",
+    },
+};
 function Card({value}) {
+    const info = glyph_info[value] || {
+        "glyph-name": "foo",
+        "description": "bar",
+        "tipa-code": "z",
+    };
     return <div className="IPACard">
         <div className="glyph">{value}</div>
-        <div className="glyph-name">latin 'b'</div>
-        <div className="description">voiced bilabial plosive</div>
-        <div className="tipa-code">b</div>
+        <div className="glyph-name">{info["glyph-name"]}</div>
+        <div className="description">{info["description"]}</div>
+        <div className="tipa-code">{info["tipa-code"]}</div>
     </div>;
 }
 

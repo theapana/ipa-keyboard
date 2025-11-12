@@ -15,7 +15,7 @@
     border: 1px solid #000000;
     padding: 8px;
     padding-left: 2px;
-    width: 200px;
+    width: 275px;
     vertical-align: top;
 }
 .IPACard .glyph {
@@ -23,7 +23,6 @@
     float: left;
     width: 72px;
     height: 80px;
-    padding-top: 10px;
     padding-right: 2px;
     text-align:center;
 }
