@@ -1,6 +1,30 @@
+import Markdown from "react-markdown";
+
+const content = `
+Why a re-arranged IPA chart?
+
+- primary objective: put _all_ pulmonic consonants in the pulmonic consonant chart
+- those symbols left off the chart too often treated like an afterthought, and frustrating for learners
+- design for learning, not techinical specification of a standard; different
+  objectives and constraints from the actual IPA standard
+
+How, and what changes?
+
+- places of articulation
+  - i.e. create column for place of articulation: epi-glottal
+  - put consonants with two places of articulation somewhere...
+- order rows (manner of articulation) by increasing sonority
+- condense rows where possible and sensible, especially for manners of
+  articulation that lack a voiceless/voiced distinction
+  - e.g. combine tap/flap w. trill
+  - e.g. combine lateral approximants with central approximants
+- semivowels (glides) in the vowel chart (mostly)
+`
+
 export default function IPAChart() {
     return <div>
         <h1>(Re-arranged) IPA Chart</h1>
+        <Markdown>{content}</Markdown>
         <PulmonicChart />
         <p />
         <VowelChart />
@@ -64,8 +88,8 @@ function PulmonicChart() {
             </tr>
             <tr>
                 <td rowSpan="2">fricative</td>
-                <IPAEntry rowSpan="2" value="ɸ" />
-                <IPAEntry rowSpan="2" value="ʙ" />
+                <IPAEntry value="ɸ" />
+                <IPAEntry value="ʙ" />
                 <IPAEntry rowSpan="2" value="f" />
                 <IPAEntry rowSpan="2" value="v" />
                 <IPAEntry value="θ" />
@@ -78,7 +102,7 @@ function PulmonicChart() {
                 <IPAEntry rowSpan="2" value="ʐ" />
                 <IPAEntry value="ç" />
                 <IPAEntry value="ʝ" />
-                <IPAEntry rowSpan="2" value="x" />
+                <IPAEntry value="x" />
                 <IPAEntry rowSpan="2" value="ɣ" />
                 <IPAEntry rowSpan="2" value="χ" />
                 <IPAEntry rowSpan="2" value="ʁ" />
@@ -90,12 +114,15 @@ function PulmonicChart() {
                 <IPAEntry rowSpan="2" value="ɦ" />
             </tr>
             <tr>
+                <IPAEntry value="ʍ" />
+                <td />
                 <td colSpan="2" />
                 <IPAEntry value="ɬ" />
                 <IPAEntry value="ɮ" />
                 <td colSpan="2" />
                 <IPAEntry value="ɕ" />
                 <IPAEntry value="ʑ" />
+                <IPAEntry value="ɧ" />
             </tr>
             <tr>
                 <td>trill/tap/flap</td>
