@@ -33,10 +33,10 @@ export default function IPAChart() {
         <br />
         <PulmonicChart setSymbol={setSymbol} />
         <Card value={symbol} />
-        <p />
+        <div className="m-6" />
         <VowelChart setSymbol={setSymbol} />
         <NonPulmonicChart setSymbol={setSymbol} />
-        <br />
+        <div className="m-6" />
         <Markdown>{content2}</Markdown>
     </div>;
 }
