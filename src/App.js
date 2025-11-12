@@ -1,10 +1,18 @@
 import {useState} from "react";
-export default function App() {
+import Keyboard from 'react-simple-keyboard';
+import 'react-simple-keyboard/build/css/index.css';
+
+
+export default function App()  {
     return <div>
         <h1>IPA Keyboard Design</h1>
         <IPAChart />
         <VowelChart />
         <NonPulmonicChart />
+        <Keyboard
+            onChange={() => {console.log("foo");}}
+            onKeyPress={() => {console.log("bar");}}
+        />
     </div>;
 }
 
