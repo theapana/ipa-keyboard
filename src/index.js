@@ -1,8 +1,9 @@
 import {StrictMode} from "react";
 import ReactDOM from "react-dom/client";
 import {BrowserRouter, Routes, Route, Navigate} from "react-router";
-import "./styles.css";
-import "./layers.css";
+import "./assets/css/styles.css";
+import "./assets/css/layers.css";
+import "./assets/css/nav.css";
 
 import App from "./App";
 import Nav from "./Nav";
