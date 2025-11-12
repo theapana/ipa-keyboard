@@ -22,8 +22,8 @@ function IPAChart() {
                 <IPAEntry value="" />
                 <IPAEntry value="p" />
                 <IPAEntry value="b" />
-                <IPAEntry value="t" colspan="3"/>
-                <IPAEntry value="d" colspan="3"/>
+                <IPAEntry value="t" colspan="3" />
+                <IPAEntry value="d" colspan="3" />
                 <IPAEntry value="ʈ" />
                 <IPAEntry value="ɖ" />
                 <IPAEntry value="c" />
@@ -59,13 +59,13 @@ function IPAChart() {
             </tr>
             <tr>
                 <td>nasal</td>
-                <IPAEntry value="m" colspan="2"/>
-                <IPAEntry value="ɱ" colspan="2"/>
-                <IPAEntry value="n" colspan="6"/>
-                <IPAEntry value="ɳ" colspan="2"/>
-                <IPAEntry value="ɲ" colspan="2"/>
-                <IPAEntry value="ŋ" colspan="2"/>
-                <IPAEntry value="ɴ" colspan="2"/>
+                <IPAEntry value="m" colspan="2" />
+                <IPAEntry value="ɱ" colspan="2" />
+                <IPAEntry value="n" colspan="6" />
+                <IPAEntry value="ɳ" colspan="2" />
+                <IPAEntry value="ɲ" colspan="2" />
+                <IPAEntry value="ŋ" colspan="2" />
+                <IPAEntry value="ɴ" colspan="2" />
             </tr>
         </tbody>
     </table>;
@@ -78,41 +78,52 @@ function IPAEntry({value, colspan}) {
         onMouseEnter={() => setHidden(false)}
         onMouseLeave={() => setHidden(true)}>
         <div className="IPAEntry">
-        {value}
-        <Key value={value} hidden={hidden} />
+            {value}
+            <Key value={value} hidden={hidden} />
         </div>
     </td>;
 }
 
 function Key({value, hidden}) {
     const keymap = {
-        "p": ["+", "p"],
-        "b": ["+", "b"],
-        "t": ["+", "t"],
-        "d": ["+", "d"],
-        "c": ["+", "c"],
-        "ɟ": ["+", "ɟ"],
+        "p": ["p"],
+        "b": ["b"],
+        "ɸ": ["+", "f"],
+        "ʙ": ["+", "b"],
+        "t": ["t"],
+        "d": ["d"],
+        "c": ["c"],
+        "ɟ": ["+", "j"],
         "k": ["+", "k"],
-        "g": ["+", "g"],
-        "f": ["+", "f"],
-        "v": ["+", "v"],
-        "θ": ["+", "θ"],
-        "ð": ["+", "ð"],
-        "ʈ": ["+", "ʈ"],
-        "ɖ": ["+", "ɖ"],
-        "s": ["+", "s"],
-        "z": ["+", "z"],
-        "ʃ": ["+", "ʃ"],
-        "ʒ": ["+", "ʒ"],
-        "ʂ": ["+", "ʂ"],
-        "ʐ": ["+", "ʐ"],
-        "m": ["+", "m"],
-        "ɱ": ["+", "ɱ"],
-        "n": ["+", "n"],
-        "ɳ": ["+", "ɳ"],
-        "ɲ": ["+", "ɲ"],
-        "ŋ": ["+", "ŋ"],
-        "ɴ": ["+", "ɴ"],
+        "g": ["g"],
+        "ɣ": ["+", "g"],
+        "f": ["f"],
+        "v": ["v"],
+        "θ": ["+", "t"],
+        "ð": ["+", "d"],
+        "ʈ": ["+", "t"],
+        "ɖ": ["+", "d"],
+        "s": ["s"],
+        "z": ["z"],
+        "ʃ": ["+", "s"],
+        "ʒ": ["+", "z"],
+        "ʂ": ["+", "s"],
+        "ʐ": ["+", "z"],
+        "m": ["m"],
+        "ɱ": ["+", "m"],
+        "n": ["n"],
+        "ɳ": ["+", "n"],
+        "ɲ": ["+", "n"],
+        "ŋ": ["+", "n"],
+        "ɴ": ["+", "n"],
+        "x": ["x"],
+        "χ": ["+", "x"],
+        "q": ["q"],
+        "ɢ": ["+", "q"],
     };
-    return !hidden && <div className="key-tooltip">{keymap[value] || value}</div>;
+    let keys = keymap[value] || [value];
+    return !hidden &&
+        <div className="key-tooltip">
+            {keys.map((key) => <div className="key">{key}</div>)}
+        </div>;
 }
