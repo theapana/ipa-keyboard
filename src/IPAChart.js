@@ -1,6 +1,8 @@
 import {useState} from 'react';
 import Markdown from "react-markdown";
 
+import {glyph_info} from './glyph_info';
+
 const content = `
 Why a re-arranged IPA chart?
 
@@ -8,6 +10,8 @@ Why a re-arranged IPA chart?
 - those symbols left off the chart too often treated like an afterthought, and frustrating for learners
 - design for learning, not techinical specification of a standard; different
   objectives and constraints from the actual IPA standard
+- make as many groupings as possible, and relate such groupings
+  - group pulmonics by major place of articulation
 `
 
 const content2 = `
@@ -41,18 +45,6 @@ export default function IPAChart() {
     </div>;
 }
 
-const glyph_info = {
-    "p": {
-        "glyph-name": "latin 'p'",
-        "description": "voiceless bilabial plosive",
-        "tipa-code": "p",
-    },
-    "b": {
-        "glyph-name": "latin 'b'",
-        "description": "voiceed bilabial plosive",
-        "tipa-code": "b",
-    },
-};
 function Card({value}) {
     const info = glyph_info[value] || {
         "glyph-name": "foo",
@@ -126,7 +118,7 @@ function PulmonicChart({setSymbol}) {
             <tr>
                 <td rowSpan="2">fricative</td>
                 <IPAEntry value="ɸ" setSymbol={setSymbol} />
-                <IPAEntry value="ʙ" setSymbol={setSymbol} />
+                <IPAEntry value="β" setSymbol={setSymbol} />
                 <IPAEntry value="f" setSymbol={setSymbol} rowSpan="2" />
                 <IPAEntry value="v" setSymbol={setSymbol} rowSpan="2" />
                 <IPAEntry value="θ" setSymbol={setSymbol} />
@@ -187,8 +179,7 @@ function PulmonicChart({setSymbol}) {
                 <td colSpan="2" />
                 <IPAEntry value="ɻ" setSymbol={setSymbol} />
                 <IPAEntry value="ɭ" setSymbol={setSymbol} />
-                <td colSpan="2"></td>
-                <td colSpan="4"></td>
+                <td colSpan="6"></td>
                 <td colSpan="6"></td>
             </tr>
             <tr>
@@ -200,7 +191,9 @@ function PulmonicChart({setSymbol}) {
                 <td colSpan="8"></td>
                 <IPAEntry value="j" setSymbol={setSymbol} />
                 <IPAEntry value="ʎ" setSymbol={setSymbol} />
-                <td colSpan="4"></td>
+                <IPAEntry value="ɰ" setSymbol={setSymbol} />
+                <IPAEntry value="ʟ" setSymbol={setSymbol} />
+                <td colSpan="2"></td>
                 <td colSpan="6"></td>
             </tr>
             <tr>
