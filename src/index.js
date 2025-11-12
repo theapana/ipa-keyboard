@@ -16,9 +16,9 @@ const root = document.getElementById("root");
 ReactDOM.createRoot(root).render(
     <StrictMode>
         <BrowserRouter>
-            <div className="vcontainer">
-                <Nav className="header" />
-                <div className="main">
+            <div className="flex flex-col">
+                <Nav />
+                <div className="min-h-[80vh] mt-2">
                     <Routes>
                         <Route path="/" element={<App />} />
                         <Route path="/IPAChart" element={<IPAChart />} />
@@ -26,15 +26,11 @@ ReactDOM.createRoot(root).render(
                         <Route path="*" element={<Navigate to="/" />} />
                     </Routes>
                 </div>
-                <div className="footer">
-                    <div className="container">
-                        <div className="left">
-                            &copy; 2025 Emily P.
-                        </div>
-                        <div className="right">
-                            About
-                        </div>
-                    </div>
+                <div class="flex gap-4 m-4 mr-6 mt-8">
+                    <div className="">&copy; 2025 Emily P.</div>
+                    <div className="grow"></div>
+                    <div className="">About</div>
+                    <div className="">Contact</div>
                 </div>
             </div>
         </BrowserRouter>

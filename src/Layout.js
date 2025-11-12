@@ -7,7 +7,7 @@ import Key from "./Key.js";
 export default function Layout() {
     return <div>
         <IPAKeyboard />
-        <p />
+        <br />
         <Modifiers /></div>;
 }
 

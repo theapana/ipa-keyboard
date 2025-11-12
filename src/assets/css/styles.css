@@ -14,7 +14,9 @@ body {
 
 h1 {
   margin-top: 0;
+  margin-bottom: 12px;
   font-size: 22px;
+  font-weight: bold;
 }
 
 h2 {
@@ -47,7 +49,15 @@ code {
 }
 
 ul {
+  list-style-type: disc;
   padding-inline-start: 20px;
+}
+
+li:first-of-type {
+  margin-top: 8px;
+}
+li {
+  line-height: 1.4;
 }
 
 .key-tooltip{

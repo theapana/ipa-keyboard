@@ -30,12 +30,13 @@ export default function IPAChart() {
     return <div>
         <h1>(Re-arranged) IPA Chart</h1>
         <Markdown>{content}</Markdown>
+        <br />
         <PulmonicChart setSymbol={setSymbol} />
         <Card value={symbol} />
         <p />
         <VowelChart setSymbol={setSymbol} />
         <NonPulmonicChart setSymbol={setSymbol} />
-        <p />
+        <br />
         <Markdown>{content2}</Markdown>
     </div>;
 }
