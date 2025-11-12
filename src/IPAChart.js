@@ -112,7 +112,8 @@ function PulmonicChart() {
                 <IPAEntry value="ɽ" />
                 <td colSpan="4"></td>
                 <IPAEntry value="ʀ" />
-                <td colSpan="7"></td>
+                <td colSpan="1"></td>
+                <td colSpan="6"></td>
             </tr>
             <tr>
                 <td>liquid</td>
@@ -123,7 +124,9 @@ function PulmonicChart() {
                 <td colSpan="2" />
                 <IPAEntry value="ɻ" />
                 <IPAEntry value="ɭ" />
-                <td colSpan="8"></td>
+                <td colSpan="2"></td>
+                <td colSpan="4"></td>
+                <td colSpan="6"></td>
             </tr>
             <tr>
                 <td>glide</td>
@@ -134,6 +137,7 @@ function PulmonicChart() {
                 <td colSpan="8"></td>
                 <IPAEntry value="j" />
                 <IPAEntry value="ʎ" />
+                <td colSpan="4"></td>
                 <td colSpan="6"></td>
             </tr>
             <tr>
@@ -145,7 +149,7 @@ function PulmonicChart() {
                 <IPAEntry value="ɲ" colSpan="2" />
                 <IPAEntry value="ŋ" colSpan="2" />
                 <IPAEntry value="ɴ" colSpan="2" />
-                <td colSpan="2"></td>
+                <td colSpan="6"></td>
             </tr>
         </tbody>
     </table>;
@@ -161,10 +165,13 @@ function VowelChart() {
                 <td>semi-vowels</td>
                 <IPAEntry value="j" />
                 <IPAEntry value="ɥ" />
-                <IPAEntry value=" " />
-                <IPAEntry value=" " />
+                <td colSpan="2"></td>
                 <IPAEntry value="ɰ" />
                 <IPAEntry value="w" />
+            </tr>
+            <tr>
+                <td></td>
+                <td colSpan="6"></td>
             </tr>
             <tr>
                 <td>high</td>
@@ -179,10 +186,9 @@ function VowelChart() {
                 <td>high (lax)</td>
                 <IPAEntry value="ɪ" />
                 <IPAEntry value="ʏ" />
-                <IPAEntry value="" />
-                <IPAEntry value="" />
+                <td colSpan="2"></td>
                 <IPAEntry value="ʊ" />
-                <IPAEntry value="" />
+                <td></td>
             </tr>
             <tr>
                 <td>mid-tense</td>
@@ -218,8 +224,7 @@ function VowelChart() {
                 <td>low</td>
                 <IPAEntry value="a" />
                 <IPAEntry value="ɶ" />
-                <IPAEntry value="" />
-                <IPAEntry value="" />
+                <td colSpan="2"></td>
                 <IPAEntry value="ɑ" />
                 <IPAEntry value="ɒ" />
             </tr>
