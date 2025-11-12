@@ -183,20 +183,6 @@ function PulmonicChart({setSymbol}) {
                 <td colSpan="6"></td>
             </tr>
             <tr>
-                <td>glide</td>
-                <IPAEntry value="w" setSymbol={setSymbol} />
-                <td></td>
-                <IPAEntry value="ʋ" setSymbol={setSymbol} />
-                <td></td>
-                <td colSpan="8"></td>
-                <IPAEntry value="j" setSymbol={setSymbol} />
-                <IPAEntry value="ʎ" setSymbol={setSymbol} />
-                <IPAEntry value="ɰ" setSymbol={setSymbol} />
-                <IPAEntry value="ʟ" setSymbol={setSymbol} />
-                <td colSpan="2"></td>
-                <td colSpan="6"></td>
-            </tr>
-            <tr>
                 <td>nasal</td>
                 <IPAEntry value="m" setSymbol={setSymbol} colSpan="2" />
                 <IPAEntry value="ɱ" setSymbol={setSymbol} colSpan="2" />
@@ -218,10 +204,18 @@ function VowelChart({setSymbol}) {
                 <td colSpan="7">Vowels</td>
             </tr>
             <tr>
-                <td>semi-vowels</td>
+                <td rowSpan="2">semi-vowels</td>
+                <IPAEntry value="ʎ" setSymbol={setSymbol} />
+                <td />
+                <td colSpan="2" />
+                <IPAEntry value="ʟ" setSymbol={setSymbol} />
+                <td />
+            </tr>
+            <tr>
                 <IPAEntry value="j" setSymbol={setSymbol} />
                 <IPAEntry value="ɥ" setSymbol={setSymbol} />
-                <td colSpan="2"></td>
+                <td />
+                <IPAEntry value="ʋ" setSymbol={setSymbol} />
                 <IPAEntry value="ɰ" setSymbol={setSymbol} />
                 <IPAEntry value="w" setSymbol={setSymbol} />
             </tr>
