@@ -16,13 +16,27 @@ const root = document.getElementById("root");
 ReactDOM.createRoot(root).render(
     <StrictMode>
         <BrowserRouter>
-            <Nav />
-            <Routes>
-                <Route path="/" element={<App />} />
-                <Route path="/IPAChart" element={<IPAChart />} />
-                <Route path="/Keyboard" element={<Layout />} />
-                <Route path="*" element={<Navigate to="/" />} />
-            </Routes>
+            <div className="vcontainer">
+                <Nav className="header" />
+                <div className="main">
+                    <Routes>
+                        <Route path="/" element={<App />} />
+                        <Route path="/IPAChart" element={<IPAChart />} />
+                        <Route path="/Keyboard" element={<Layout />} />
+                        <Route path="*" element={<Navigate to="/" />} />
+                    </Routes>
+                </div>
+                <div className="footer">
+                    <div className="container">
+                        <div className="left">
+                            &copy; 2025 Emily P.
+                        </div>
+                        <div className="right">
+                            About
+                        </div>
+                    </div>
+                </div>
+            </div>
         </BrowserRouter>
     </StrictMode>
 );
