@@ -20,10 +20,10 @@ ReactDOM.createRoot(root).render(
                 <Nav />
                 <div className="min-h-[80vh] mt-2">
                     <Routes>
-                        <Route path="/" element={<App />} />
-                        <Route path="/IPAChart" element={<IPAChart />} />
-                        <Route path="/Keyboard" element={<Layout />} />
-                        <Route path="*" element={<Navigate to="/" />} />
+                        <Route path="/ipa-keyboard" element={<App />} />
+                        <Route path="/ipa-keyboard/IPAChart" element={<IPAChart />} />
+                        <Route path="/ipa-keyboard/Keyboard" element={<Layout />} />
+                        <Route path="*" element={<Navigate to="/ipa-keyboard" />} />
                     </Routes>
                 </div>
                 <div class="flex gap-4 mb-4 mr-6 mt-8">
