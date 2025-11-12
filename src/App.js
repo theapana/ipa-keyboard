@@ -3,7 +3,98 @@ export default function App() {
     return <div>
         <h1>IPA Keyboard Design</h1>
         <IPAChart />
+        <VowelChart />
+        <NonPulmonicChart />
     </div>;
+}
+
+function VowelChart() {
+    return <table className="IPAChart">
+        <tbody>
+            <tr>
+                <td colspan="6">Vowels</td>
+            </tr>
+            <tr>
+                <IPAEntry value="i" />
+                <IPAEntry value="y" />
+                <IPAEntry value="ɨ" />
+                <IPAEntry value="ʉ" />
+                <IPAEntry value="ɯ" />
+                <IPAEntry value="u" />
+            </tr>
+            <tr>
+                <IPAEntry value="ɪ" />
+                <IPAEntry value="ʏ" />
+                <IPAEntry value="" />
+                <IPAEntry value="" />
+                <IPAEntry value="ʊ" />
+                <IPAEntry value="" />
+            </tr>
+            <tr>
+                <IPAEntry value="e" />
+                <IPAEntry value="ø" />
+                <IPAEntry value="" />
+                <IPAEntry value="" />
+                <IPAEntry value="ɤ" />
+                <IPAEntry value="o" />
+            </tr>
+            <tr>
+                <IPAEntry value="ɛ" />
+                <IPAEntry value="œ" />
+                <IPAEntry value="" />
+                <IPAEntry value="" />
+                <IPAEntry value="ʌ" />
+                <IPAEntry value="ɔ" />
+            </tr>
+            <tr>
+                <IPAEntry value="a" />
+                <IPAEntry value="ɶ" />
+                <IPAEntry value="" />
+                <IPAEntry value="" />
+                <IPAEntry value="ɑ" />
+                <IPAEntry value="ɒ" />
+            </tr>
+        </tbody>
+    </table>;
+}
+function NonPulmonicChart() {
+    return <table className="IPAChart">
+        <tbody>
+            <tr>
+                <td colspan="3">Non-Pulmonic Consonants</td>
+            </tr>
+            <tr>
+                <IPAEntry value="Clicks" />
+                <IPAEntry value="Impl." />
+                <IPAEntry value="Eject." />
+            </tr>
+            <tr>
+                <IPAEntry value="ʘ" />
+                <IPAEntry value="ɓ" />
+                <IPAEntry value="ʼ" />
+            </tr>
+            <tr>
+                <IPAEntry value="ǀ" />
+                <IPAEntry value="ɗ" />
+                <IPAEntry value="" />
+            </tr>
+            <tr>
+                <IPAEntry value="ǁ" />
+                <IPAEntry value="ʄ" />
+                <IPAEntry value="" />
+            </tr>
+            <tr>
+                <IPAEntry value="ǂ" />
+                <IPAEntry value="ɠ" />
+                <IPAEntry value="" />
+            </tr>
+            <tr>
+                <IPAEntry value="ǃ" />
+                <IPAEntry value="ʛ" />
+                <IPAEntry value="" />
+            </tr>
+        </tbody>
+        </table>;
 }
 
 function IPAChart() {
@@ -33,6 +124,7 @@ function IPAChart() {
                 <IPAEntry value="g" />
                 <IPAEntry value="q" />
                 <IPAEntry value="ɢ" />
+                <IPAEntry value="ʔ" />
             </tr>
             <tr>
                 <td>fricative</td>
@@ -48,15 +140,25 @@ function IPAChart() {
                 <IPAEntry value="ʒ" />
                 <IPAEntry value="ʂ" />
                 <IPAEntry value="ʐ" />
-                <IPAEntry value="c" />
-                <IPAEntry value="ɟ" />
+                <IPAEntry value="ç" />
+                <IPAEntry value="ʝ" />
                 <IPAEntry value="x" />
                 <IPAEntry value="ɣ" />
                 <IPAEntry value="χ" />
-                <IPAEntry value="" />
+                <IPAEntry value="ʁ" />
+                <IPAEntry value="h" />
+                <IPAEntry value="ɦ" />
             </tr>
             <tr>
-                <td>liquid</td>
+                <td>approximant</td>
+                <IPAEntry value="w" colspan="2" />
+                <IPAEntry value="ʋ" colspan="2" />
+                <IPAEntry value="ɹ" colspan="3" />
+                <IPAEntry value="l" colspan="3" />
+                <IPAEntry value="ɻ" />
+                <IPAEntry value="ɭ" />
+                <IPAEntry value="j" />
+                <IPAEntry value="ʎ" />
             </tr>
             <tr>
                 <td>nasal</td>
@@ -95,6 +197,10 @@ function Key({value, hidden}) {
         "d": ["d"],
         "c": ["c"],
         "ɟ": ["+", "j"],
+        "ç": ["c"],
+        "ɕ": ["c"],
+        "ʑ": ["z"],
+        "ʝ": ["j"],
         "k": ["+", "k"],
         "g": ["g"],
         "ɣ": ["+", "g"],
@@ -106,8 +212,8 @@ function Key({value, hidden}) {
         "ɖ": ["+", "d"],
         "s": ["s"],
         "z": ["z"],
-        "ʃ": ["+", "s"],
-        "ʒ": ["+", "z"],
+        "ʃ": ["-", "s"],
+        "ʒ": ["-", "z"],
         "ʂ": ["+", "s"],
         "ʐ": ["+", "z"],
         "m": ["m"],
@@ -116,11 +222,52 @@ function Key({value, hidden}) {
         "ɳ": ["+", "n"],
         "ɲ": ["+", "n"],
         "ŋ": ["+", "n"],
-        "ɴ": ["+", "n"],
+        "ɴ": ["q", "n"],
         "x": ["x"],
         "χ": ["+", "x"],
+        "h": ["h"],
+        "ɦ": ["b", "h"],
+        "ʀ": ["q", "r"],
+        "ʁ": ["q", "R"],
+        "ʙ": ["q", "b"],
+        "ʟ": ["q", "l"],
         "q": ["q"],
-        "ɢ": ["+", "q"],
+        "ɢ": ["q", "q"],
+        "ɓ": ["b", "b"],
+        "ɗ": ["b", "d"],
+        "ʄ": ["b", "s"],
+        "ɠ": ["b", "g"],
+        "ʛ": ["b", "G"],
+        "w": ["w"],
+        "ʋ": ["v"],
+        "ɹ": ["r"],
+        "l": ["l"],
+        "ɻ": ["r", "r"],
+        "ɭ": ["r", "l"],
+        "j": ["j"],
+        "ʎ": ["l", "j"],
+        "a": ["a"],
+        "i": ["i"],
+        "y": ["y"],
+        "ɨ":["/", "i"],
+        "ʉ":["/", "i"],
+        "e": ["e"],
+        "ø": ["/", "o"],
+        "ɤ": [""],
+        "o": ["o"],
+        "ɯ": ["w"],
+        "ɰ": ["w"],
+        "u": ["-", "u"],
+        "ɪ": ["-", "i"],
+        "ʏ": ["-", "y"],
+        "ʊ": ["-", "u"],
+        "ɛ": ["-", "e"],
+        "œ": ["o"],
+        "ʌ": [""],
+        "ɔ": ["-", "o"],
+        "ɶ": ["O"],
+        "ɑ": ["a"],
+        "ɒ": ["a"],
     };
     let keys = keymap[value] || [value];
     if (value == "") {return null;}
