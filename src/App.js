@@ -1,5 +1,9 @@
+import Markdown from "react-markdown";
+
+const text = "# Home"
+
 export default function App()  {
     return <div>
-        <h1>Home</h1>
+        <Markdown>{text}</Markdown>
     </div>;
 }
