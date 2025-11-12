@@ -20,7 +20,7 @@ function VowelChart() {
     return <table className="IPAChart">
         <tbody>
             <tr>
-                <td colspan="6">Vowels</td>
+                <td colSpan="6">Vowels</td>
             </tr>
             <tr>
                 <IPAEntry value="i" />
@@ -69,7 +69,7 @@ function NonPulmonicChart() {
     return <table className="IPAChart">
         <tbody>
             <tr>
-                <td colspan="3">Non-Pulmonic Consonants</td>
+                <td colSpan="3">Non-Pulmonic Consonants</td>
             </tr>
             <tr>
                 <IPAEntry value="Clicks" />
@@ -110,11 +110,11 @@ function IPAChart() {
         <tbody>
             <tr>
                 <td></td>
-                <td colspan="4">Labial</td>
-                <td colspan="8">Coronal</td>
-                <td colspan="2"></td>
-                <td colspan="4">Dorsal</td>
-                <td colspan="6">Radical</td>
+                <td colSpan="4">Labial</td>
+                <td colSpan="8">Coronal</td>
+                <td colSpan="2"></td>
+                <td colSpan="4">Dorsal</td>
+                <td colSpan="6">Radical</td>
             </tr>
             <tr>
                 <td>plosive</td>
@@ -122,8 +122,8 @@ function IPAChart() {
                 <IPAEntry value="" />
                 <IPAEntry value="p" />
                 <IPAEntry value="b" />
-                <IPAEntry value="t" colspan="3" />
-                <IPAEntry value="d" colspan="3" />
+                <IPAEntry value="t" colSpan="3" />
+                <IPAEntry value="d" colSpan="3" />
                 <IPAEntry value="ʈ" />
                 <IPAEntry value="ɖ" />
                 <IPAEntry value="c" />
@@ -159,10 +159,10 @@ function IPAChart() {
             </tr>
             <tr>
                 <td>approximant</td>
-                <IPAEntry value="w" colspan="2" />
-                <IPAEntry value="ʋ" colspan="2" />
-                <IPAEntry value="ɹ" colspan="3" />
-                <IPAEntry value="l" colspan="3" />
+                <IPAEntry value="w" colSpan="2" />
+                <IPAEntry value="ʋ" colSpan="2" />
+                <IPAEntry value="ɹ" colSpan="3" />
+                <IPAEntry value="l" colSpan="3" />
                 <IPAEntry value="ɻ" />
                 <IPAEntry value="ɭ" />
                 <IPAEntry value="j" />
@@ -170,22 +170,22 @@ function IPAChart() {
             </tr>
             <tr>
                 <td>nasal</td>
-                <IPAEntry value="m" colspan="2" />
-                <IPAEntry value="ɱ" colspan="2" />
-                <IPAEntry value="n" colspan="6" />
-                <IPAEntry value="ɳ" colspan="2" />
-                <IPAEntry value="ɲ" colspan="2" />
-                <IPAEntry value="ŋ" colspan="2" />
-                <IPAEntry value="ɴ" colspan="2" />
+                <IPAEntry value="m" colSpan="2" />
+                <IPAEntry value="ɱ" colSpan="2" />
+                <IPAEntry value="n" colSpan="6" />
+                <IPAEntry value="ɳ" colSpan="2" />
+                <IPAEntry value="ɲ" colSpan="2" />
+                <IPAEntry value="ŋ" colSpan="2" />
+                <IPAEntry value="ɴ" colSpan="2" />
             </tr>
         </tbody>
     </table>;
 }
 
-function IPAEntry({value, colspan}) {
+function IPAEntry({value, colSpan}) {
     const [hidden, setHidden] = useState(true);
     return <td
-        colspan={colspan}
+        colSpan={colSpan}
         onMouseEnter={() => setHidden(false)}
         onMouseLeave={() => setHidden(true)}>
         <div className="IPAEntry">
