@@ -188,8 +188,8 @@ function VowelChart() {
                 <td>mid-tense</td>
                 <IPAEntry value="e" />
                 <IPAEntry value="ø" />
-                <IPAEntry value="" />
-                <IPAEntry value="" />
+                <IPAEntry value="ɘ" />
+                <IPAEntry value="ɵ" />
                 <IPAEntry value="ɤ" />
                 <IPAEntry value="o" />
             </tr>
@@ -203,8 +203,8 @@ function VowelChart() {
                 <td>mid-lax</td>
                 <IPAEntry value="ɛ" />
                 <IPAEntry value="œ" />
-                <IPAEntry value="" />
-                <IPAEntry value="" />
+                <IPAEntry value="ɜ" />
+                <IPAEntry value="ɞ" />
                 <IPAEntry value="ʌ" />
                 <IPAEntry value="ɔ" />
             </tr>
