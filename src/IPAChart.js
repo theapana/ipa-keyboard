@@ -2,6 +2,7 @@ export default function IPAChart() {
     return <div>
         <h1>(Re-arranged) IPA Chart</h1>
         <PulmonicChart />
+        <p />
         <VowelChart />
         <NonPulmonicChart />
     </div>;

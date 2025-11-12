@@ -46,6 +46,9 @@ ul {
   padding-inline-start: 20px;
 }
 
+.IPAChart {
+    display: inline;
+}
 .IPAChart tr,
 .IPAChart td,
 .IPAChart {
