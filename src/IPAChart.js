@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import Markdown from "react-markdown";
 
 const content = `
@@ -25,14 +26,15 @@ Considerations in making changes:
 `
 
 export default function IPAChart() {
+    const [symbol, setSymbol] = useState('p');
     return <div>
         <h1>(Re-arranged) IPA Chart</h1>
         <Markdown>{content}</Markdown>
-        <PulmonicChart />
-        <Card value="b"/>
+        <PulmonicChart setSymbol={setSymbol} />
+        <Card value={symbol} />
         <p />
-        <VowelChart />
-        <NonPulmonicChart />
+        <VowelChart setSymbol={setSymbol} />
+        <NonPulmonicChart setSymbol={setSymbol} />
         <p />
         <Markdown>{content2}</Markdown>
     </div>;
@@ -46,12 +48,15 @@ function Card({value}) {
         <div className="tipa-code">b</div>
     </div>;
 }
-function IPAEntry({value, colSpan, rowSpan}) {
-    // TODO: show key sequence on hover
-    return <td colSpan={colSpan} rowSpan={rowSpan}>{value}</td>;
+
+function IPAEntry({value, colSpan, rowSpan, setSymbol}) {
+    return <td colSpan={colSpan} rowSpan={rowSpan}
+        onMouseEnter={() => {setSymbol(value);}}>
+        {value}
+    </td>;
 }
 
-function PulmonicChart() {
+function PulmonicChart({setSymbol}) {
     return <table className="IPAChart">
         <tbody>
             <tr>
@@ -79,79 +84,79 @@ function PulmonicChart() {
             </tr>
             <tr>
                 <td>plosive</td>
-                <IPAEntry value="" colSpan="2" />
-                <IPAEntry value="p" />
-                <IPAEntry value="b" />
                 <td colSpan="2" />
-                <IPAEntry value="t" />
-                <IPAEntry value="d" />
+                <IPAEntry value="p" setSymbol={setSymbol} />
+                <IPAEntry value="b" setSymbol={setSymbol} />
                 <td colSpan="2" />
-                <IPAEntry value="ʈ" />
-                <IPAEntry value="ɖ" />
-                <IPAEntry value="c" />
-                <IPAEntry value="ɟ" />
-                <IPAEntry value="k" />
-                <IPAEntry value="g" />
-                <IPAEntry value="q" />
-                <IPAEntry value="ɢ" />
+                <IPAEntry value="t" setSymbol={setSymbol} />
+                <IPAEntry value="d" setSymbol={setSymbol} />
+                <td colSpan="2" />
+                <IPAEntry value="ʈ" setSymbol={setSymbol} />
+                <IPAEntry value="ɖ" setSymbol={setSymbol} />
+                <IPAEntry value="c" setSymbol={setSymbol} />
+                <IPAEntry value="ɟ" setSymbol={setSymbol} />
+                <IPAEntry value="k" setSymbol={setSymbol} />
+                <IPAEntry value="g" setSymbol={setSymbol} />
+                <IPAEntry value="q" setSymbol={setSymbol} />
+                <IPAEntry value="ɢ" setSymbol={setSymbol} />
                 <td colSpan="2"></td>
-                <IPAEntry value="ʡ" />
+                <IPAEntry value="ʡ" setSymbol={setSymbol} />
                 <td></td>
-                <IPAEntry value="ʔ" />
+                <IPAEntry value="ʔ" setSymbol={setSymbol} />
                 <td></td>
             </tr>
             <tr>
                 <td rowSpan="2">fricative</td>
-                <IPAEntry value="ɸ" />
-                <IPAEntry value="ʙ" />
-                <IPAEntry rowSpan="2" value="f" />
-                <IPAEntry rowSpan="2" value="v" />
-                <IPAEntry value="θ" />
-                <IPAEntry value="ð" />
-                <IPAEntry value="s" />
-                <IPAEntry value="z" />
-                <IPAEntry value="ʃ" />
-                <IPAEntry value="ʒ" />
-                <IPAEntry rowSpan="2" value="ʂ" />
-                <IPAEntry rowSpan="2" value="ʐ" />
-                <IPAEntry value="ç" />
-                <IPAEntry value="ʝ" />
-                <IPAEntry value="x" />
-                <IPAEntry rowSpan="2" value="ɣ" />
-                <IPAEntry rowSpan="2" value="χ" />
-                <IPAEntry rowSpan="2" value="ʁ" />
-                <IPAEntry rowSpan="2" value="ħ" />
-                <IPAEntry rowSpan="2" value="ʕ" />
-                <IPAEntry rowSpan="2" value="ʜ" />
-                <IPAEntry rowSpan="2" value="ʢ" />
-                <IPAEntry rowSpan="2" value="h" />
-                <IPAEntry rowSpan="2" value="ɦ" />
+                <IPAEntry value="ɸ" setSymbol={setSymbol} />
+                <IPAEntry value="ʙ" setSymbol={setSymbol} />
+                <IPAEntry value="f" setSymbol={setSymbol} rowSpan="2" />
+                <IPAEntry value="v" setSymbol={setSymbol} rowSpan="2" />
+                <IPAEntry value="θ" setSymbol={setSymbol} />
+                <IPAEntry value="ð" setSymbol={setSymbol} />
+                <IPAEntry value="s" setSymbol={setSymbol} />
+                <IPAEntry value="z" setSymbol={setSymbol} />
+                <IPAEntry value="ʃ" setSymbol={setSymbol} />
+                <IPAEntry value="ʒ" setSymbol={setSymbol} />
+                <IPAEntry value="ʂ" setSymbol={setSymbol} rowSpan="2" />
+                <IPAEntry value="ʐ" setSymbol={setSymbol} rowSpan="2" />
+                <IPAEntry value="ç" setSymbol={setSymbol} />
+                <IPAEntry value="ʝ" setSymbol={setSymbol} />
+                <IPAEntry value="x" setSymbol={setSymbol} />
+                <IPAEntry value="ɣ" setSymbol={setSymbol} rowSpan="2" />
+                <IPAEntry value="χ" setSymbol={setSymbol} rowSpan="2" />
+                <IPAEntry value="ʁ" setSymbol={setSymbol} rowSpan="2" />
+                <IPAEntry value="ħ" setSymbol={setSymbol} rowSpan="2" />
+                <IPAEntry value="ʕ" setSymbol={setSymbol} rowSpan="2" />
+                <IPAEntry value="ʜ" setSymbol={setSymbol} rowSpan="2" />
+                <IPAEntry value="ʢ" setSymbol={setSymbol} rowSpan="2" />
+                <IPAEntry value="h" setSymbol={setSymbol} rowSpan="2" />
+                <IPAEntry value="ɦ" setSymbol={setSymbol} rowSpan="2" />
             </tr>
             <tr>
-                <IPAEntry value="ʍ" />
+                <IPAEntry value="ʍ" setSymbol={setSymbol} />
                 <td />
                 <td colSpan="2" />
-                <IPAEntry value="ɬ" />
-                <IPAEntry value="ɮ" />
+                <IPAEntry value="ɬ" setSymbol={setSymbol} />
+                <IPAEntry value="ɮ" setSymbol={setSymbol} />
                 <td colSpan="2" />
-                <IPAEntry value="ɕ" />
-                <IPAEntry value="ʑ" />
-                <IPAEntry value="ɧ" />
+                <IPAEntry value="ɕ" setSymbol={setSymbol} />
+                <IPAEntry value="ʑ" setSymbol={setSymbol} />
+                <IPAEntry value="ɧ" setSymbol={setSymbol} />
             </tr>
             <tr>
                 <td>trill/tap/flap</td>
-                <IPAEntry value="ʙ" />
+                <IPAEntry value="ʙ" setSymbol={setSymbol} />
                 <td></td>
                 <td></td>
-                <IPAEntry value="ⱱ" />
+                <IPAEntry value="ⱱ" setSymbol={setSymbol} />
                 <td colSpan="2"></td>
-                <IPAEntry value="r" />
-                <IPAEntry value="ɾ" />
+                <IPAEntry value="r" setSymbol={setSymbol} />
+                <IPAEntry value="ɾ" setSymbol={setSymbol} />
                 <td colSpan="2"></td>
                 <td></td>
-                <IPAEntry value="ɽ" />
+                <IPAEntry value="ɽ" setSymbol={setSymbol} />
                 <td colSpan="4"></td>
-                <IPAEntry value="ʀ" />
+                <IPAEntry value="ʀ" setSymbol={setSymbol} />
                 <td colSpan="1"></td>
                 <td colSpan="6"></td>
             </tr>
@@ -159,43 +164,43 @@ function PulmonicChart() {
                 <td>liquid</td>
                 <td colSpan="4"></td>
                 <td colSpan="2" />
-                <IPAEntry value="ɹ" />
-                <IPAEntry value="l" />
+                <IPAEntry value="ɹ" setSymbol={setSymbol} />
+                <IPAEntry value="l" setSymbol={setSymbol} />
                 <td colSpan="2" />
-                <IPAEntry value="ɻ" />
-                <IPAEntry value="ɭ" />
+                <IPAEntry value="ɻ" setSymbol={setSymbol} />
+                <IPAEntry value="ɭ" setSymbol={setSymbol} />
                 <td colSpan="2"></td>
                 <td colSpan="4"></td>
                 <td colSpan="6"></td>
             </tr>
             <tr>
                 <td>glide</td>
-                <IPAEntry value="w" />
+                <IPAEntry value="w" setSymbol={setSymbol} />
                 <td></td>
-                <IPAEntry value="ʋ" />
+                <IPAEntry value="ʋ" setSymbol={setSymbol} />
                 <td></td>
                 <td colSpan="8"></td>
-                <IPAEntry value="j" />
-                <IPAEntry value="ʎ" />
+                <IPAEntry value="j" setSymbol={setSymbol} />
+                <IPAEntry value="ʎ" setSymbol={setSymbol} />
                 <td colSpan="4"></td>
                 <td colSpan="6"></td>
             </tr>
             <tr>
                 <td>nasal</td>
-                <IPAEntry value="m" colSpan="2" />
-                <IPAEntry value="ɱ" colSpan="2" />
-                <IPAEntry value="n" colSpan="6" />
-                <IPAEntry value="ɳ" colSpan="2" />
-                <IPAEntry value="ɲ" colSpan="2" />
-                <IPAEntry value="ŋ" colSpan="2" />
-                <IPAEntry value="ɴ" colSpan="2" />
+                <IPAEntry value="m" setSymbol={setSymbol} colSpan="2" />
+                <IPAEntry value="ɱ" setSymbol={setSymbol} colSpan="2" />
+                <IPAEntry value="n" setSymbol={setSymbol} colSpan="6" />
+                <IPAEntry value="ɳ" setSymbol={setSymbol} colSpan="2" />
+                <IPAEntry value="ɲ" setSymbol={setSymbol} colSpan="2" />
+                <IPAEntry value="ŋ" setSymbol={setSymbol} colSpan="2" />
+                <IPAEntry value="ɴ" setSymbol={setSymbol} colSpan="2" />
                 <td colSpan="6"></td>
             </tr>
         </tbody>
     </table>;
 }
 
-function VowelChart() {
+function VowelChart({setSymbol}) {
     return <table className="IPAChart">
         <tbody>
             <tr>
@@ -203,11 +208,11 @@ function VowelChart() {
             </tr>
             <tr>
                 <td>semi-vowels</td>
-                <IPAEntry value="j" />
-                <IPAEntry value="ɥ" />
+                <IPAEntry value="j" setSymbol={setSymbol} />
+                <IPAEntry value="ɥ" setSymbol={setSymbol} />
                 <td colSpan="2"></td>
-                <IPAEntry value="ɰ" />
-                <IPAEntry value="w" />
+                <IPAEntry value="ɰ" setSymbol={setSymbol} />
+                <IPAEntry value="w" setSymbol={setSymbol} />
             </tr>
             <tr>
                 <td></td>
@@ -215,98 +220,98 @@ function VowelChart() {
             </tr>
             <tr>
                 <td>high</td>
-                <IPAEntry value="i" />
-                <IPAEntry value="y" />
-                <IPAEntry value="ɨ" />
-                <IPAEntry value="ʉ" />
-                <IPAEntry value="ɯ" />
-                <IPAEntry value="u" />
+                <IPAEntry value="i" setSymbol={setSymbol} />
+                <IPAEntry value="y" setSymbol={setSymbol} />
+                <IPAEntry value="ɨ" setSymbol={setSymbol} />
+                <IPAEntry value="ʉ" setSymbol={setSymbol} />
+                <IPAEntry value="ɯ" setSymbol={setSymbol} />
+                <IPAEntry value="u" setSymbol={setSymbol} />
             </tr>
             <tr>
                 <td>high (lax)</td>
-                <IPAEntry value="ɪ" />
-                <IPAEntry value="ʏ" />
+                <IPAEntry value="ɪ" setSymbol={setSymbol} />
+                <IPAEntry value="ʏ" setSymbol={setSymbol} />
                 <td colSpan="2"></td>
-                <IPAEntry value="ʊ" />
+                <IPAEntry value="ʊ" setSymbol={setSymbol} />
                 <td></td>
             </tr>
             <tr>
                 <td>mid-tense</td>
-                <IPAEntry value="e" />
-                <IPAEntry value="ø" />
-                <IPAEntry value="ɘ" />
-                <IPAEntry value="ɵ" />
-                <IPAEntry value="ɤ" />
-                <IPAEntry value="o" />
+                <IPAEntry value="e" setSymbol={setSymbol} />
+                <IPAEntry value="ø" setSymbol={setSymbol} />
+                <IPAEntry value="ɘ" setSymbol={setSymbol} />
+                <IPAEntry value="ɵ" setSymbol={setSymbol} />
+                <IPAEntry value="ɤ" setSymbol={setSymbol} />
+                <IPAEntry value="o" setSymbol={setSymbol} />
             </tr>
             <tr>
                 <td></td>
                 <td colSpan="2"></td>
-                <IPAEntry value="ə" colSpan="2" />
+                <IPAEntry value="ə" setSymbol={setSymbol} colSpan="2" />
                 <td colSpan="2"></td>
             </tr>
             <tr>
                 <td>mid-lax</td>
-                <IPAEntry value="ɛ" />
-                <IPAEntry value="œ" />
-                <IPAEntry value="ɜ" />
-                <IPAEntry value="ɞ" />
-                <IPAEntry value="ʌ" />
-                <IPAEntry value="ɔ" />
+                <IPAEntry value="ɛ" setSymbol={setSymbol} />
+                <IPAEntry value="œ" setSymbol={setSymbol} />
+                <IPAEntry value="ɜ" setSymbol={setSymbol} />
+                <IPAEntry value="ɞ" setSymbol={setSymbol} />
+                <IPAEntry value="ʌ" setSymbol={setSymbol} />
+                <IPAEntry value="ɔ" setSymbol={setSymbol} />
             </tr>
             <tr>
                 <td></td>
-                <IPAEntry value="æ" colSpan="2" />
-                <IPAEntry value="ɐ" colSpan="2" />
+                <IPAEntry value="æ" setSymbol={setSymbol} colSpan="2" />
+                <IPAEntry value="ɐ" setSymbol={setSymbol} colSpan="2" />
                 <td colSpan="2"></td>
             </tr>
             <tr>
                 <td>low</td>
-                <IPAEntry value="a" />
-                <IPAEntry value="ɶ" />
+                <IPAEntry value="a" setSymbol={setSymbol} />
+                <IPAEntry value="ɶ" setSymbol={setSymbol} />
                 <td colSpan="2"></td>
-                <IPAEntry value="ɑ" />
-                <IPAEntry value="ɒ" />
+                <IPAEntry value="ɑ" setSymbol={setSymbol} />
+                <IPAEntry value="ɒ" setSymbol={setSymbol} />
             </tr>
         </tbody>
     </table>;
 }
 
-function NonPulmonicChart() {
+function NonPulmonicChart({setSymbol}) {
     return <table className="IPAChart">
         <tbody>
             <tr>
                 <td colSpan="3">Non-Pulmonic Consonants</td>
             </tr>
             <tr>
-                <IPAEntry value="Clicks" />
-                <IPAEntry value="Impl." />
-                <IPAEntry value="Eject." />
+                <td>"Clicks"</td>
+                <td>"Impl."</td>
+                <td>"Eject."</td>
             </tr>
             <tr>
-                <IPAEntry value="ʘ" />
-                <IPAEntry value="ɓ" />
-                <IPAEntry value="ʼ" />
+                <IPAEntry value="ʘ" setSymbol={setSymbol} />
+                <IPAEntry value="ɓ" setSymbol={setSymbol} />
+                <IPAEntry value="ʼ" setSymbol={setSymbol} />
             </tr>
             <tr>
-                <IPAEntry value="ǀ" />
-                <IPAEntry value="ɗ" />
-                <IPAEntry value="" />
+                <IPAEntry value="ǀ" setSymbol={setSymbol} />
+                <IPAEntry value="ɗ" setSymbol={setSymbol} />
+                <td />
             </tr>
             <tr>
-                <IPAEntry value="ǁ" />
-                <IPAEntry value="ʄ" />
-                <IPAEntry value="" />
+                <IPAEntry value="ǁ" setSymbol={setSymbol} />
+                <IPAEntry value="ʄ" setSymbol={setSymbol} />
+                <td />
             </tr>
             <tr>
-                <IPAEntry value="ǂ" />
-                <IPAEntry value="ɠ" />
-                <IPAEntry value="" />
+                <IPAEntry value="ǂ" setSymbol={setSymbol} />
+                <IPAEntry value="ɠ" setSymbol={setSymbol} />
+                <td />
             </tr>
             <tr>
-                <IPAEntry value="ǃ" />
-                <IPAEntry value="ʛ" />
-                <IPAEntry value="" />
+                <IPAEntry value="ǃ" setSymbol={setSymbol} />
+                <IPAEntry value="ʛ" setSymbol={setSymbol} />
+                <td />
             </tr>
         </tbody>
     </table>;
