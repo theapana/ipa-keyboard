@@ -13,15 +13,16 @@ export default function Layout() {
 
 function Label({_}) {
     return <div>
-        <div className="base">{_["base"]}</div>
-        <div className="lower">{_["lower"]}</div>
-        <div className="raise">{_["raise"]}</div>
-        <div className="implosive">{_["implosive"]}</div>
-        <div className="retroflex">{_["retroflex"]}</div>
-        <div className="lateral">{_["lateral"]}</div>
-        <div className="uvular">{_["uvular"]}</div>
-        <div className="slash">{_["slash"]}</div>
-        <div className="round">{_["round"]}</div>
+        <div className="key-label lower">{_["lower"]}</div>
+        <div className="key-label base">{_["base"]}</div>
+        <div className="key-label raise">{_["raise"]}</div>
+        <div className="key-label round">{_["round"]}</div>
+        <br />
+        <div className="key-label implosive">{_["implosive"]}</div>
+        <div className="key-label lateral">{_["lateral"]}</div>
+        <div className="key-label uvular">{_["uvular"]}</div>
+        <div className="key-label slash">{_["slash"]}</div>
+        <div className="key-label retroflex">{_["retroflex"]}</div>
     </div>;
 }
 
@@ -54,6 +55,9 @@ const keymap = {
     "y": {"base": "y", "lower": "ʏ"},
     "e": {"base": "e", "lower": "ɛ"},
     "o": {"base": "o", "slash": "ø", "lower": "ɔ", "round": "ɤ"},
+    "'": {"base": "'", "lower": "ˈ"}, // apostrophe => primary stress
+    ",": {"base": ",", "lower": "ˌ"}, // comma => secondary stress
+    ";": {"base": ";", "lower": "ː"}, // semicolon => length
     // "œ": {"base": "o"},
     // "ʌ": {"base": "o"},
     // "ɶ": {"base": "O"},
@@ -88,6 +92,9 @@ function IPAKeyboard() {
         "x": ReactDOMServer.renderToString(<Label _={keymap["x"]} />),
         "y": ReactDOMServer.renderToString(<Label _={keymap["y"]} />),
         "z": ReactDOMServer.renderToString(<Label _={keymap["z"]} />),
+        ",": ReactDOMServer.renderToString(<Label _={keymap[","]} />),
+        "'": ReactDOMServer.renderToString(<Label _={keymap["'"]} />),
+        ";": ReactDOMServer.renderToString(<Label _={keymap[";"]} />),
     };
     return <div className="keyboard">
         <h1>IPA Keyboard Layout</h1>
