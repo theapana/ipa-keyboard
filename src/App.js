@@ -125,6 +125,8 @@ function Key({value, hidden}) {
     let keys = keymap[value] || [value];
     return !hidden &&
         <div className="key-tooltip">
-            {keys.map((key) => <div className="key">{key}</div>)}
+            {keys.map((key) => <div className="key-background">
+                <div className="key">{key}</div>
+            </div>)}
         </div>;
 }
