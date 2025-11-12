@@ -4,6 +4,7 @@ import {BrowserRouter, Routes, Route, Navigate} from "react-router";
 import "./assets/css/styles.css";
 import "./assets/css/layers.css";
 import "./assets/css/nav.css";
+import "./assets/css/chart.css";
 
 import App from "./App";
 import Nav from "./Nav";

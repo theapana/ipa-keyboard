@@ -1,0 +1,32 @@
+.IPAChart {
+    display: inline;
+}
+.IPAChart tr,
+.IPAChart td,
+.IPAChart {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+}
+.IPACard {
+    display: inline-block;
+    border: 1px solid #000000;
+    padding: 10px;
+    width: 200px;
+    vertical-align: top;
+}
+.IPACard .glyph {
+    font-size: 48px;
+    float: left;
+    padding: 10px;
+}
+.IPACard .glyph-name {
+}
+.IPACard .description {
+    text-indent: 1em hanging;
+}
+.IPACard .tipa-code {
+    font-family: Courier New;
+}

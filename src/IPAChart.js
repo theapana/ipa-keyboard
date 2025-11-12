@@ -7,7 +7,9 @@ Why a re-arranged IPA chart?
 - those symbols left off the chart too often treated like an afterthought, and frustrating for learners
 - design for learning, not techinical specification of a standard; different
   objectives and constraints from the actual IPA standard
+`
 
+const content2 = `
 How, and what changes?
 
 - places of articulation
@@ -26,12 +28,23 @@ export default function IPAChart() {
         <h1>(Re-arranged) IPA Chart</h1>
         <Markdown>{content}</Markdown>
         <PulmonicChart />
+        <Card value="b"/>
         <p />
         <VowelChart />
         <NonPulmonicChart />
+        <p />
+        <Markdown>{content2}</Markdown>
     </div>;
 }
 
+function Card({value}) {
+    return <div className="IPACard">
+        <div className="glyph">{value}</div>
+        <div className="glyph-name">latin 'b'</div>
+        <div className="description">voiced bilabial plosive</div>
+        <div className="tipa-code">b</div>
+    </div>;
+}
 function IPAEntry({value, colSpan, rowSpan}) {
     // TODO: show key sequence on hover
     return <td colSpan={colSpan} rowSpan={rowSpan}>{value}</td>;
