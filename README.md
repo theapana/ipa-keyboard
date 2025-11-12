@@ -18,9 +18,15 @@ Design principles:
     grounding_
     - e.g. /ʃ/ is retracted ([+ant]) /s/
     - e.g. /ɰ/ is the semi-vowel of /ɯ/, which is unround /u/
-    - e.g. /ʎ/ is not just turned-y, but lateral /j/, which itself is semi-vowel of /i
-        - therefore, instead of `{mod}` + `y`; /ʎ/ is instead `l` + `j` (lateral
-            /j/)
+    - e.g. /ʎ/ is not turned-y, or lambda-like character, but lateral /j/
+        - /j/ palatal approximant, /ʎ/ lateral-palatal approximant
+        - therefore, instead of `{mod}` + `y`; 
+          /ʎ/ is instead `l` + `j` (lateral /j/)
+    - e.g. think of /ɥ/ as semi-vowel of /y/, not turned-h
+        - /ɥ/ not related to /h/ glottal fricative at all really
+        - I suppose because of its "descender" it "looks" like 'y'?
+        - the typographic inclination in me cannot see past turned-h to get to
+            'y'-like shape
 - secondly, if typographical cues clearly outweigh complex key commands required
     to implement phonetically grounded sequence, then those should be used
     instead
