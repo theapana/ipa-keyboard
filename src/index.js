@@ -1,6 +1,6 @@
 import {StrictMode} from "react";
 import ReactDOM from "react-dom/client";
-import {BrowserRouter, Routes, Route} from "react-router";
+import {BrowserRouter, Routes, Route, Navigate} from "react-router";
 import "./styles.css";
 import "./layers.css";
 
@@ -19,6 +19,7 @@ ReactDOM.createRoot(root).render(
                 <Route path="/" element={<App />} />
                 <Route path="/IPAChart" element={<IPAChart />} />
                 <Route path="/Keyboard" element={<Layout />} />
+                <Route path="*" element={<Navigate to="/" />} />
             </Routes>
         </BrowserRouter>
     </StrictMode>
