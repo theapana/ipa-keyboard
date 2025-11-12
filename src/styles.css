@@ -108,9 +108,20 @@ ul {
     min-width: 28px;
     max-height: 28px;
     max-width: 28px;
-    margin: auto;
-    margin-top: 2px;
     text-align: center;
+    display: inline-block;
+}
+
+.key-list dt:before {
+  display: block;
+}
+.key-list dt {
+  display: inline;
+  margin-inline-start: 10px;
+}
+.key-list dd {
+  display: inline;
+  margin-inline-start: 10px;
 }
 
 .key-background {
