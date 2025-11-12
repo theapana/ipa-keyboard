@@ -3,12 +3,24 @@
 This project aims to (1) define a keyboard spec (2) explain the rationale behind
 the design.
 
+This layout is designed to integrate with a regular typing layout (e.g. QWERTY,
+Dvorak) so that IPA transcriptions may be entered without the need to change to
+a different layout, type the transcription, and return to the base layout.  That
+
+The mechanism for entering keys will generally be to first hit a _modifier_
+combination that activates a particular _layer_, and then enter the _base_ key,
+which will insert the specified IPA symbol, and return the keyboard to it's
+regular state.  This mechanism is known as "one-shot" by keyboard enthusiasts.
+
 Design principles:
 
 - first and foremost, key commands for an IPA symbol should have _phonetic
     grounding_
     - e.g. /ʃ/ is retracted ([+ant]) /s/
     - e.g. /ɰ/ is the semi-vowel of /ɯ/, which is unround /u/
+    - e.g. /ʎ/ is not just turned-y, but lateral /j/, which itself is semi-vowel of /i
+        - therefore, instead of `{mod}` + `y`; /ʎ/ is instead `l` + `j` (lateral
+            /j/)
 - secondly, if typographical cues clearly outweigh complex key commands required
     to implement phonetically grounded sequence, then those should be used
     instead
@@ -35,3 +47,8 @@ Objectives:
     integrate this into their own designs if they wish
 - minimize cognitive load for linguists, language enthusiasts, hobbyists wishing
     to type IPA transcriptions
+
+Audience:
+
+- linguists, language enthusiasts
+- not necessarily a keyboard-layout enthusiast
