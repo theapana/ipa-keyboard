@@ -123,6 +123,7 @@ function Key({value, hidden}) {
         "ɢ": ["+", "q"],
     };
     let keys = keymap[value] || [value];
+    if (value == "") {return null;}
     return !hidden &&
         <div className="key-tooltip">
             {keys.map((key) => <div className="key-background">
