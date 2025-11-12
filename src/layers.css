@@ -1,0 +1,35 @@
+.base{
+    display: inline;
+}
+.lower{
+    color: blue;
+    display: inline;
+}
+.raise{
+    color: red;
+    display: inline;
+}
+.slash{
+    color: green;
+    display: inline;
+}
+.retroflex{
+    color: orange;
+    display: inline;
+}
+.implosive{
+    color: brown;
+    display: inline;
+}
+.lateral{
+    color: cyan;
+    display: inline;
+}
+.uvular{
+    color: olive;
+    display: inline;
+}
+.round{
+    color: orange;
+    display: inline;
+}
