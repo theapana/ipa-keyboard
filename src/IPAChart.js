@@ -10,8 +10,9 @@ Why a re-arranged IPA chart?
 `
 
 const content2 = `
-How, and what changes?
+Considerations in making changes:
 
+- extend; don't modify
 - places of articulation
   - i.e. create column for place of articulation: epi-glottal
   - put consonants with two places of articulation somewhere...
