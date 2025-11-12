@@ -62,14 +62,10 @@ ul {
     border: 1px solid #000000;
     border-collapse: collapse;
     padding: 10px;
+    margin: 20px;
     text-align: center;
 }
-
-.IPAEntry {
-    max-height: 0px;
-    max-width: 0px;
-    min-width: 12px;
-    min-height: 14px;
+.IPAPlace {
 }
 /* yellow:    #b58900; */
 /* orange:    #cb4b16; */

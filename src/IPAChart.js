@@ -1,14 +1,17 @@
-import {useState} from "react";
-
 import Key from "./Key.js";
 
 export default function IPAChart() {
     return <div>
-        <h1>IPA Chart</h1>
+        <h1>(Re-arranged) IPA Chart</h1>
         <PulmonicChart />
         <VowelChart />
         <NonPulmonicChart />
     </div>;
+}
+
+function IPAEntry({value, colSpan, rowSpan}) {
+    // TODO: show key sequence on hover
+    return <td colSpan={colSpan} rowSpan={rowSpan}>{value}</td>;
 }
 
 function PulmonicChart() {
@@ -23,12 +26,29 @@ function PulmonicChart() {
                 <td colSpan="6">Radical</td>
             </tr>
             <tr>
+                <td></td>
+                <td className="IPAPlace" colSpan="2">bilab.</td>
+                <td className="IPAPlace" colSpan="2">la-den</td>
+                <td className="IPAPlace" colSpan="2">den.</td>
+                <td className="IPAPlace" colSpan="2">alv.</td>
+                <td className="IPAPlace" colSpan="2">post-alv.</td>
+                <td className="IPAPlace" colSpan="2">retro</td>
+                <td className="IPAPlace" colSpan="2">pal.</td>
+                <td className="IPAPlace" colSpan="2">vel.</td>
+                <td className="IPAPlace" colSpan="2">uv.</td>
+                <td className="IPAPlace" colSpan="2">phar.</td>
+                <td className="IPAPlace" colSpan="2">epi-g.</td>
+                <td className="IPAPlace" colSpan="2">glot.</td>
+            </tr>
+            <tr>
                 <td>plosive</td>
                 <IPAEntry value="" colSpan="2" />
                 <IPAEntry value="p" />
                 <IPAEntry value="b" />
-                <IPAEntry value="t" colSpan="3" />
-                <IPAEntry value="d" colSpan="3" />
+                <td colSpan="2" />
+                <IPAEntry value="t" />
+                <IPAEntry value="d" />
+                <td colSpan="2" />
                 <IPAEntry value="ʈ" />
                 <IPAEntry value="ɖ" />
                 <IPAEntry value="c" />
@@ -37,46 +57,84 @@ function PulmonicChart() {
                 <IPAEntry value="g" />
                 <IPAEntry value="q" />
                 <IPAEntry value="ɢ" />
+                <td colSpan="2"></td>
+                <IPAEntry value="ʡ" />
+                <td></td>
                 <IPAEntry value="ʔ" />
+                <td></td>
             </tr>
             <tr>
-                <td>fricative</td>
-                <IPAEntry value="ɸ" />
-                <IPAEntry value="ʙ" />
-                <IPAEntry value="f" />
-                <IPAEntry value="v" />
+                <td rowSpan="2">fricative</td>
+                <IPAEntry rowSpan="2" value="ɸ" />
+                <IPAEntry rowSpan="2" value="ʙ" />
+                <IPAEntry rowSpan="2" value="f" />
+                <IPAEntry rowSpan="2" value="v" />
                 <IPAEntry value="θ" />
                 <IPAEntry value="ð" />
                 <IPAEntry value="s" />
                 <IPAEntry value="z" />
                 <IPAEntry value="ʃ" />
                 <IPAEntry value="ʒ" />
-                <IPAEntry value="ʂ" />
-                <IPAEntry value="ʐ" />
+                <IPAEntry rowSpan="2" value="ʂ" />
+                <IPAEntry rowSpan="2" value="ʐ" />
                 <IPAEntry value="ç" />
                 <IPAEntry value="ʝ" />
-                <IPAEntry value="x" />
-                <IPAEntry value="ɣ" />
-                <IPAEntry value="χ" />
-                <IPAEntry value="ʁ" />
-                <IPAEntry value="h" />
-                <IPAEntry value="ɦ" />
+                <IPAEntry rowSpan="2" value="x" />
+                <IPAEntry rowSpan="2" value="ɣ" />
+                <IPAEntry rowSpan="2" value="χ" />
+                <IPAEntry rowSpan="2" value="ʁ" />
+                <IPAEntry rowSpan="2" value="ħ" />
+                <IPAEntry rowSpan="2" value="ʕ" />
+                <IPAEntry rowSpan="2" value="ʜ" />
+                <IPAEntry rowSpan="2" value="ʢ" />
+                <IPAEntry rowSpan="2" value="h" />
+                <IPAEntry rowSpan="2" value="ɦ" />
             </tr>
             <tr>
-                <td colSpan="5"></td>
-                <IPAEntry value="ɬ" colSpan="3" />
-                <IPAEntry value="ɮ" colSpan="3" />
+                <td colSpan="2" />
+                <IPAEntry value="ɬ" />
+                <IPAEntry value="ɮ" />
+                <td colSpan="2" />
+                <IPAEntry value="ɕ" />
+                <IPAEntry value="ʑ" />
             </tr>
             <tr>
-                <td>approximant</td>
-                <IPAEntry value="w" colSpan="2" />
-                <IPAEntry value="ʋ" colSpan="2" />
-                <IPAEntry value="ɹ" colSpan="3" />
-                <IPAEntry value="l" colSpan="3" />
+                <td>trill/tap/flap</td>
+                <IPAEntry value="ʙ" />
+                <td></td>
+                <td></td>
+                <IPAEntry value="ⱱ" />
+                <td colSpan="2"></td>
+                <IPAEntry value="r" />
+                <IPAEntry value="ɾ" />
+                <td colSpan="2"></td>
+                <td></td>
+                <IPAEntry value="ɽ" />
+                <td colSpan="4"></td>
+                <IPAEntry value="ʀ" />
+                <td colSpan="7"></td>
+            </tr>
+            <tr>
+                <td>liquid</td>
+                <td colSpan="4"></td>
+                <td colSpan="2" />
+                <IPAEntry value="ɹ" />
+                <IPAEntry value="l" />
+                <td colSpan="2" />
                 <IPAEntry value="ɻ" />
                 <IPAEntry value="ɭ" />
+                <td colSpan="8"></td>
+            </tr>
+            <tr>
+                <td>glide</td>
+                <IPAEntry value="w" />
+                <td></td>
+                <IPAEntry value="ʋ" />
+                <td></td>
+                <td colSpan="8"></td>
                 <IPAEntry value="j" />
                 <IPAEntry value="ʎ" />
+                <td colSpan="6"></td>
             </tr>
             <tr>
                 <td>nasal</td>
@@ -87,31 +145,29 @@ function PulmonicChart() {
                 <IPAEntry value="ɲ" colSpan="2" />
                 <IPAEntry value="ŋ" colSpan="2" />
                 <IPAEntry value="ɴ" colSpan="2" />
+                <td colSpan="2"></td>
             </tr>
         </tbody>
     </table>;
-}
-
-function IPAEntry({value, colSpan}) {
-    const [hidden, setHidden] = useState(true);
-    return <td
-        colSpan={colSpan}
-        onMouseEnter={() => setHidden(false)}
-        onMouseLeave={() => setHidden(true)}>
-        <div className="IPAEntry">
-            {value}
-            <Key value={value} hidden={hidden} />
-        </div>
-    </td>;
 }
 
 function VowelChart() {
     return <table className="IPAChart">
         <tbody>
             <tr>
-                <td colSpan="6">Vowels</td>
+                <td colSpan="7">Vowels</td>
             </tr>
             <tr>
+                <td>semi-vowels</td>
+                <IPAEntry value="j" />
+                <IPAEntry value="ɥ" />
+                <IPAEntry value=" " />
+                <IPAEntry value=" " />
+                <IPAEntry value="ɰ" />
+                <IPAEntry value="w" />
+            </tr>
+            <tr>
+                <td>high</td>
                 <IPAEntry value="i" />
                 <IPAEntry value="y" />
                 <IPAEntry value="ɨ" />
@@ -120,6 +176,7 @@ function VowelChart() {
                 <IPAEntry value="u" />
             </tr>
             <tr>
+                <td>high (lax)</td>
                 <IPAEntry value="ɪ" />
                 <IPAEntry value="ʏ" />
                 <IPAEntry value="" />
@@ -128,6 +185,7 @@ function VowelChart() {
                 <IPAEntry value="" />
             </tr>
             <tr>
+                <td>mid-tense</td>
                 <IPAEntry value="e" />
                 <IPAEntry value="ø" />
                 <IPAEntry value="" />
@@ -136,6 +194,13 @@ function VowelChart() {
                 <IPAEntry value="o" />
             </tr>
             <tr>
+                <td></td>
+                <td colSpan="2"></td>
+                <IPAEntry value="ə" colSpan="2" />
+                <td colSpan="2"></td>
+            </tr>
+            <tr>
+                <td>mid-lax</td>
                 <IPAEntry value="ɛ" />
                 <IPAEntry value="œ" />
                 <IPAEntry value="" />
@@ -144,6 +209,13 @@ function VowelChart() {
                 <IPAEntry value="ɔ" />
             </tr>
             <tr>
+                <td></td>
+                <IPAEntry value="æ" colSpan="2" />
+                <IPAEntry value="ɐ" colSpan="2" />
+                <td colSpan="2"></td>
+            </tr>
+            <tr>
+                <td>low</td>
                 <IPAEntry value="a" />
                 <IPAEntry value="ɶ" />
                 <IPAEntry value="" />
