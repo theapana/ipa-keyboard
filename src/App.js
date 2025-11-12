@@ -77,8 +77,10 @@ function IPAEntry({value, colspan}) {
         colspan={colspan}
         onMouseEnter={() => setHidden(false)}
         onMouseLeave={() => setHidden(true)}>
+        <div className="IPAEntry">
         {value}
         <Key value={value} hidden={hidden} />
+        </div>
     </td>;
 }
 

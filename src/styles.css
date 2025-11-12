@@ -65,9 +65,18 @@ body {
     text-align: center;
 }
 
+.IPAEntry {
+    max-height: 0px;
+    max-width: 0px;
+    min-width: 12px;
+    min-height: 14px;
+}
+
 .key-tooltip {
+    background-color: #f0f0f0;
     border: 1px solid #000000;
     border-radius: 4px;
     font-family: Courier New;
     padding: 4px;
+    min-width: 16px;
 }
