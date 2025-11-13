@@ -205,11 +205,9 @@ function VowelChart({setSymbol}) {
             </tr>
             <tr>
                 <td rowSpan="2">semi-vowels</td>
-                <IPAEntry value="ʎ" setSymbol={setSymbol} />
-                <td />
+                <IPAEntry value="ʎ" setSymbol={setSymbol} colSpan="2" />
                 <td colSpan="2" />
-                <IPAEntry value="ʟ" setSymbol={setSymbol} />
-                <td />
+                <IPAEntry value="ʟ" setSymbol={setSymbol} colSpan="2" />
             </tr>
             <tr>
                 <IPAEntry value="j" setSymbol={setSymbol} />
