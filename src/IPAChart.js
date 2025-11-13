@@ -29,6 +29,18 @@ Considerations in making changes:
 - semivowels (glides) in the vowel chart (mostly)
 `
 
+const content_approx = `
+A closer look at approximants:
+
+- in close relation with a corresponding vowel, hence a.k.a. 'semi-vowel' (e.g.
+  /i/ with /j/)
+- what is "labial-palatal" compared to just "palatal", but _round_ vs
+  _un-round_; which is exactly the distinction between pairs of vowels, such as
+  /i/ and /y/
+- therefore, place them above the vowels in the vowel chart
+- and lateral approximants too
+`
+
 export default function IPAChart() {
     const [symbol, setSymbol] = useState('p');
     return <div>
@@ -40,6 +52,7 @@ export default function IPAChart() {
         <div className="m-6" />
         <VowelChart setSymbol={setSymbol} />
         <NonPulmonicChart setSymbol={setSymbol} />
+        <Markdown>{content_approx}</Markdown>
         <div className="m-6" />
         <Markdown>{content2}</Markdown>
     </div>;
