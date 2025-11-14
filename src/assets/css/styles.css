@@ -14,6 +14,7 @@
   table, tbody, tr, td,
   .IPACard {
     @apply border border-slate-400 dark:border-blue-950;
+    @apply bg-white dark:bg-slate-900;
   }
 }
 
