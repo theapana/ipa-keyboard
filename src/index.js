@@ -26,7 +26,7 @@ ReactDOM.createRoot(root).render(
                         <Route path="*" element={<Navigate to="/ipa-keyboard/IPAChart" />} />
                     </Routes>
                 </div>
-                <div class="flex gap-4 mb-4 mr-6 mt-8">
+                <div className="flex gap-4 mb-4 mr-6 mt-8">
                     <div className="">&copy; 2025 Emily P.</div>
                     <div className="grow"></div>
                     <div className="">About</div>
