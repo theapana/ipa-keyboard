@@ -12,6 +12,8 @@
 }
 .IPACard {
     display: inline-block;
+    position: sticky;
+    top: 20px;
     border: 1px solid #000000;
     padding: 8px;
     padding-left: 2px;
