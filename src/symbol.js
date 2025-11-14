@@ -339,4 +339,144 @@ export const symbol_info = {
         "description": "voiced uvular nasal",
         "tipa-code": "\\;N",
     },
+    "i": {
+        "glyph-name": "lower-case 'i'",
+        "description": "high front unround vowel",
+        "tipa-code": "i",
+    },
+    "y": {
+        "glyph-name": "lower-case 'y'",
+        "description": "high front round vowel",
+        "tipa-code": "y",
+    },
+    "ɨ": {
+        "glyph-name": "barred 'i'",
+        "description": "high central unround vowel",
+        "tipa-code": "1",
+    },
+    "ʉ": {
+        "glyph-name": "barred 'u'",
+        "description": "high central round vowel",
+        "tipa-code": "0",
+    },
+    "ɯ": {
+        "glyph-name": "turned 'm'",
+        "description": "high back unround vowel",
+        "tipa-code": "W",
+    },
+    "u": {
+        "glyph-name": "lower-case 'u'",
+        "description": "high back round vowel",
+        "tipa-code": "u",
+    },
+    "ɪ": {
+        "glyph-name": "small capital 'i'",
+        "description": "high near-front lax unround vowel",
+        "tipa-code": "I",
+    },
+    "ʏ": {
+        "glyph-name": "small capital 'y'",
+        "description": "high near-front lax round vowel",
+        "tipa-code": "Y",
+    },
+    "ʊ": {
+        "glyph-name": "turned omega",
+        "description": "high near-back lax round vowel",
+        "tipa-code": "U",
+    },
+    "e": {
+        "glyph-name": "lower-case 'e'",
+        "description": "tense mid front unround vowel",
+        "tipa-code": "e",
+    },
+    "ø": {
+        "glyph-name": "slashed 'o'",
+        "description": "tense mid front round vowel",
+        "tipa-code": "\\o",
+    },
+    "ɘ": {
+        "glyph-name": "reversed 'e'",
+        "description": "tense central unround vowel",
+        "tipa-code": "9",
+    },
+    "ɵ": {
+        "glyph-name": "barred 'o'",
+        "description": "tense central round vowel",
+        "tipa-code": "8",
+    },
+    "ə": {
+        "glyph-name": "schwa",
+        "description": "mid central vowel",
+        "tipa-code": "@",
+    },
+    "ɤ": {
+        "glyph-name": "ram's horns",
+        "description": "tense back unround vowel",
+        "tipa-code": "7",
+    },
+    "o": {
+        "glyph-name": "lower-case 'o'",
+        "description": "tense back round vowel",
+        "tipa-code": "o",
+    },
+    "ɛ": {
+        "glyph-name": "epsilon",
+        "description": "lax mid front unround vowel",
+        "tipa-code": "E",
+    },
+    "œ": {
+        "glyph-name": "lower-case 'o-e' ligature",
+        "description": "lax mid front round vowel",
+        "tipa-code": "\\oe",
+    },
+    "ɜ": {
+        "glyph-name": "reversed epsilon",
+        "description": "lax mid central unround vowel",
+        "tipa-code": "3",
+    },
+    "ɞ": {
+        "glyph-name": "closed reversed epsilon",
+        "description": "lax mid central round vowel",
+        "tipa-code": "\\textcloseepsilon",
+    },
+    "ʌ": {
+        "glyph-name": "turned 'v'",
+        "description": "lax mid back unround vowel",
+        "tipa-code": "2",
+    },
+    "ɔ": {
+        "glyph-name": "open 'o'",
+        "description": "lax mid back round vowel",
+        "tipa-code": "O",
+    },
+    "æ": {
+        "glyph-name": "ash",
+        "description": "low front unround vowel",
+        "tipa-code": "\\ae",
+    },
+    "ɐ": {
+        "glyph-name": "turned 'a'",
+        "description": "low central vowel",
+        "tipa-code": "5",
+    },
+    "a": {
+        "glyph-name": "lower-case 'a'",
+        "description": "low unround vowel",
+        "tipa-code": "a",
+    },
+    "ɶ": {
+        "glyph-name": "small capital 'o-e' ligature",
+        "description": "low round vowel",
+        "tipa-code": "\\OE",
+    },
+    "ɑ": {
+        "glyph-name": "script 'a'",
+        "description": "low back unround vowel",
+        "tipa-code": "A",
+    },
+    "ɒ": {
+        "glyph-name": "turned script 'a'",
+        "description": "low back round vowel",
+        "tipa-code": "6",
+    },
 };
