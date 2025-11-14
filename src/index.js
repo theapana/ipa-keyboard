@@ -16,7 +16,7 @@ const root = document.getElementById("root");
 ReactDOM.createRoot(root).render(
     <StrictMode>
         <BrowserRouter>
-            <div className="flex flex-col ml-4">
+            <div className="flex flex-col pl-4">
                 <Nav />
                 <div className="min-h-[80vh] mt-2">
                     <Routes>

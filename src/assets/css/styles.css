@@ -6,10 +6,19 @@
   box-sizing: border-box;
 }
 
+@layer base {
+  body {
+    @apply dark:bg-slate-900 dark:text-slate-500;
+    @apply m-5;
+  }
+  table, tbody, tr, td,
+  .IPACard {
+    @apply border border-slate-400 dark:border-blue-950;
+  }
+}
+
 body {
   font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
 }
 
 h1 {
