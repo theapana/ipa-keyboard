@@ -20,7 +20,7 @@ ReactDOM.createRoot(root).render(
                 <Nav />
                 <div className="min-h-[80vh] mt-2">
                     <Routes>
-                        <Route path="/ipa-keyboard/index" element={<App />} />
+                        <Route path="/ipa-keyboard" element={<App />} />
                         <Route path="/ipa-keyboard/IPAChart" element={<IPAChart />} />
                         <Route path="/ipa-keyboard/Keyboard" element={<Layout />} />
                         <Route path="*" element={<Navigate to="/ipa-keyboard/IPAChart" />} />
