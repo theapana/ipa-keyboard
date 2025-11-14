@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import Markdown from "react-markdown";
 
-import {glyph_info} from './glyph_info';
+import {symbol_info} from './symbol';
 
 const content = `
 Why a re-arranged IPA chart?
@@ -59,7 +59,7 @@ export default function IPAChart() {
 }
 
 function Card({value}) {
-    const info = glyph_info[value] || {
+    const info = symbol_info[value] || {
         "glyph-name": "foo",
         "description": "bar",
         "tipa-code": "z",

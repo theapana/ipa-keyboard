@@ -1,4 +1,4 @@
-export const glyph_info = {
+export const symbol_info = {
     "p": {
         "glyph-name": "lower-case 'p'",
         "description": "voiceless bilabial plosive",
