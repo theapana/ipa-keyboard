@@ -4,12 +4,12 @@
     background-color: #f0f0f0;
     border: 1px solid #000000;
 
-    @apply bg-white dark:bg-slate-900;
-    @apply border border-slate-800 dark:border-blue-950;
+    @apply bg-gray-100 dark:bg-slate-800;
+    @apply border border-slate-800 dark:border-slate-800;
     @apply shadow-md;
     border-radius: 4px;
 
-    font-family: Courier New;
+    @apply font-mono;
     padding: 4px;
 
     min-height: 28px;
