@@ -4,7 +4,7 @@
     background-color: #f0f0f0;
     border: 1px solid #000000;
 
-    @apply bg-gray-100 dark:bg-slate-800;
+    @apply bg-neutral-50 dark:bg-slate-800;
     @apply border border-slate-800 dark:border-slate-800;
     @apply shadow-md;
     border-radius: 4px;
