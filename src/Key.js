@@ -80,17 +80,6 @@ const keymap = {
     "ɒ": ["a"],
 };
 
-export function KeyTooltip({value, hidden}) {
-    let keys = keymap[value] || [value];
-    if (value == "") {return null;}
-    return !hidden &&
-        <div className="key-tooltip">
-            {keys.map((key) => <div className="key-background">
-                <div className="key">{key}</div>
-            </div>)}
-        </div>;
-}
-
 export default function Key({value}) {
     return <div className="key">{value}</div>;
 }

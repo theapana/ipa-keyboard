@@ -1,0 +1,37 @@
+.key {
+    background-color: #f0f0f0;
+    border: 1px solid #000000;
+
+    @apply bg-white dark:bg-slate-900;
+    @apply border border-slate-800 dark:border-blue-950;
+    @apply shadow-md;
+    border-radius: 4px;
+
+    font-family: Courier New;
+    padding: 4px;
+
+    min-height: 28px;
+    min-width: 28px;
+    max-height: 28px;
+    max-width: 28px;
+
+    text-align: center;
+    display: inline-block;
+}
+
+.key-list dt:before {
+  display: block;
+}
+.key-list dt {
+  display: inline;
+  margin-inline-start: 10px;
+}
+.key-list dd {
+  display: inline;
+  margin-inline-start: 10px;
+}
+
+
+.keyboard {
+    max-width: 650px;
+}
