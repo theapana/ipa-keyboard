@@ -5,9 +5,6 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig(() => {
     return {
         base: "ipa-keyboard",
-        build: {
-            outDir: 'build',
-        },
         plugins: [react(), tailwindcss()],
     };
 });
