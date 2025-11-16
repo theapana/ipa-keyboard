@@ -11,11 +11,13 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.17",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-markdown": "^10.1.0",
     "react-router": "^7.9.5",
-    "react-simple-keyboard": "^3.8.132"
+    "react-simple-keyboard": "^3.8.132",
+    "tailwindcss": "^4.1.17"
   },
   "browserslist": {
     "production": [
@@ -32,7 +34,6 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.1",
     "gh-pages": "^6.3.0",
-    "tailwindcss": "^3.4.18",
     "vite": "^7.2.2"
   }
 }
