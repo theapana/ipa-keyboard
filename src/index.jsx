@@ -9,8 +9,8 @@ import "./assets/css/key.css";
 
 import App from "./App";
 import Nav from "./Nav";
-import IPAChart from "./IPAChart.js";
-import Layout from "./Layout.js";
+import IPAChart from "./IPAChart";
+import Layout from "./Layout";
 
 const root = document.getElementById("root");
 

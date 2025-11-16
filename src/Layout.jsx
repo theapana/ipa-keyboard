@@ -2,7 +2,7 @@ import ReactDOMServer from 'react-dom/server';
 import Keyboard from 'react-simple-keyboard';
 import 'react-simple-keyboard/build/css/index.css';
 
-import Key from "./Key.js";
+import Key from "./Key";
 
 export default function Layout() {
     return <div>
