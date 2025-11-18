@@ -7,7 +7,7 @@ import Key from "./Key";
 
 export default function Layout() {
     return <div>
-        <IPAKeyboard />
+        <IPAKeyboard layer="base"/>
         <br />
         <Modifiers /></div>;
 }
@@ -27,38 +27,38 @@ function Label({_}) {
     </div>;
 }
 
-function IPAKeyboard() {
+function IPAKeyboard({layer}) {
     // https://react.dev/reference/react/Children#alternatives
     const display = {
-        "a": ReactDOMServer.renderToString(<Label _={keymap["a"]} />),
-        "b": ReactDOMServer.renderToString(<Label _={keymap["b"]} />),
-        "c": ReactDOMServer.renderToString(<Label _={keymap["c"]} />),
-        "d": ReactDOMServer.renderToString(<Label _={keymap["d"]} />),
-        "e": ReactDOMServer.renderToString(<Label _={keymap["e"]} />),
-        "f": ReactDOMServer.renderToString(<Label _={keymap["f"]} />),
-        "g": ReactDOMServer.renderToString(<Label _={keymap["g"]} />),
-        "h": ReactDOMServer.renderToString(<Label _={keymap["h"]} />),
-        "i": ReactDOMServer.renderToString(<Label _={keymap["i"]} />),
-        "j": ReactDOMServer.renderToString(<Label _={keymap["j"]} />),
-        "k": ReactDOMServer.renderToString(<Label _={keymap["k"]} />),
-        "l": ReactDOMServer.renderToString(<Label _={keymap["l"]} />),
-        "m": ReactDOMServer.renderToString(<Label _={keymap["m"]} />),
-        "n": ReactDOMServer.renderToString(<Label _={keymap["n"]} />),
-        "o": ReactDOMServer.renderToString(<Label _={keymap["o"]} />),
-        "p": ReactDOMServer.renderToString(<Label _={keymap["p"]} />),
-        "q": ReactDOMServer.renderToString(<Label _={keymap["q"]} />),
-        "r": ReactDOMServer.renderToString(<Label _={keymap["r"]} />),
-        "s": ReactDOMServer.renderToString(<Label _={keymap["s"]} />),
-        "t": ReactDOMServer.renderToString(<Label _={keymap["t"]} />),
-        "u": ReactDOMServer.renderToString(<Label _={keymap["u"]} />),
-        "v": ReactDOMServer.renderToString(<Label _={keymap["v"]} />),
-        "w": ReactDOMServer.renderToString(<Label _={keymap["w"]} />),
-        "x": ReactDOMServer.renderToString(<Label _={keymap["x"]} />),
-        "y": ReactDOMServer.renderToString(<Label _={keymap["y"]} />),
-        "z": ReactDOMServer.renderToString(<Label _={keymap["z"]} />),
-        ",": ReactDOMServer.renderToString(<Label _={keymap[","]} />),
-        "'": ReactDOMServer.renderToString(<Label _={keymap["'"]} />),
-        ";": ReactDOMServer.renderToString(<Label _={keymap[";"]} />),
+        "a": keymap["a"][layer],
+        "b": keymap["b"][layer],
+        "c": keymap["c"][layer],
+        "d": keymap["d"][layer],
+        "e": keymap["e"][layer],
+        "f": keymap["f"][layer],
+        "g": keymap["g"][layer],
+        "h": keymap["h"][layer],
+        "i": keymap["i"][layer],
+        "j": keymap["j"][layer],
+        "k": keymap["k"][layer],
+        "l": keymap["l"][layer],
+        "m": keymap["m"][layer],
+        "n": keymap["n"][layer],
+        "o": keymap["o"][layer],
+        "p": keymap["p"][layer],
+        "q": keymap["q"][layer],
+        "r": keymap["r"][layer],
+        "s": keymap["s"][layer],
+        "t": keymap["t"][layer],
+        "u": keymap["u"][layer],
+        "v": keymap["v"][layer],
+        "w": keymap["w"][layer],
+        "x": keymap["x"][layer],
+        "y": keymap["y"][layer],
+        "z": keymap["z"][layer],
+        ",": keymap[","][layer],
+        "'": keymap["'"][layer],
+        ";": keymap[";"][layer],
     };
     return <div className="keyboard">
         <h1>IPA Keyboard Layout</h1>
