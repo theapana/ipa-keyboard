@@ -1,4 +1,4 @@
-import ReactDOMServer from 'react-dom/server';
+import {useState} from 'react';
 import Keyboard from 'react-simple-keyboard';
 import 'react-simple-keyboard/build/css/index.css';
 
@@ -6,8 +6,20 @@ import {keymap} from "./keymap";
 import Key from "./Key";
 
 export default function Layout() {
+    const [layer, setLayer] = useState("base");
     return <div>
-        <IPAKeyboard layer="base"/>
+        <IPAKeyboard layer={layer}/>
+        <select size="10" onClick={(e) => setLayer(e.target.value)}>
+            <option>base</option>
+            <option>lower</option>
+            <option>raise</option>
+            <option>slash</option>
+            <option>round</option>
+            <option>lateral</option>
+            <option>retroflex</option>
+            <option>uvular</option>
+            <option>implosive</option>
+        </select>
         <br />
         <Modifiers /></div>;
 }
