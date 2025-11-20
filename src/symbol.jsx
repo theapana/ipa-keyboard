@@ -474,9 +474,55 @@ export const symbol_info = {
         "description": "low back unround vowel",
         "tipa-code": "A",
     },
-    "ɒ": {
+    "ɒ":
+    {
         "glyph-name": "turned script 'a'",
         "description": "low back round vowel",
         "tipa-code": "6",
+    },
+    "ˈ": {
+        "glyph-name": "vertical stroke (superior)",
+        "description": "primary stress",
+        "tipa-code": "\"",
+    },
+    "ˌ": {
+        "glyph-name": "vertical stroke (inferior)",
+        "description": "secondary stress",
+        "tipa-code": "\"\"",
+    },
+    "ː": {
+        "glyph-name": "length mark",
+        "description": "long",
+        "tipa-code": ":",
+    },
+    "ˑ": {
+        "glyph-name": "half-length mark",
+        "description": "half-long",
+        "tipa-code": ";",
+    },
+    "ĕ": {
+        "glyph-name": "combining breve",
+        "description": "extra-short",
+        "tipa-code": "\\u{e}",
+    },
+    "|": {
+        "glyph-name": "vertical line",
+        "description": "minor (foot) group",
+        "tipa-code": ".",
+    },
+    "‖": {
+        "glyph-name": "double vertical line",
+        "description": "major (intonation) group",
+        "tipa-code": "\\textvertline",
+    },
+    ".": {
+        "glyph-name": "bottom tie-bar",
+        "description": "syllable break",
+        "tipa-code": "\\textdoublevertline",
+    },
+    "a͜u": {
+        "glyph-name": "turned script 'a'",
+        "description": "linking (absence of a break)",
+        "tipa-code": "\\t*{au}",
     },
 };

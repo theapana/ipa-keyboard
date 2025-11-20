@@ -52,6 +52,7 @@ export default function IPAChart() {
         <div className="m-6" />
         <VowelChart setSymbol={setSymbol} />
         <NonPulmonicChart setSymbol={setSymbol} />
+        <SymbolsChart setSymbol={setSymbol} />
         <Markdown>{content_approx}</Markdown>
         <div className="m-6" />
         <Markdown>{content2}</Markdown>
@@ -328,6 +329,52 @@ function NonPulmonicChart({setSymbol}) {
                 <IPAEntry value="ǃ" setSymbol={setSymbol} />
                 <IPAEntry value="ʛ" setSymbol={setSymbol} />
                 <td />
+            </tr>
+        </tbody>
+    </table>;
+}
+
+function SymbolsChart({setSymbol}) {
+    return <table className="IPAChart">
+        <tbody>
+            <tr>
+                <td colSpan="2">Supra-segmentals</td>
+            </tr>
+            <tr>
+                <td>Primary Stress</td>
+                <IPAEntry value="ˈ" setSymbol={setSymbol} />
+            </tr>
+            <tr>
+                <td>Secondary Stress</td>
+                <IPAEntry value="ˌ" setSymbol={setSymbol} />
+            </tr>
+            <tr>
+                <td>Long</td>
+                <IPAEntry value="ː" setSymbol={setSymbol} />
+            </tr>
+            <tr>
+                <td>Half-long</td>
+                <IPAEntry value="ˑ" setSymbol={setSymbol} />
+            </tr>
+            <tr>
+                <td>Extra-short</td>
+                <IPAEntry value="ĕ" setSymbol={setSymbol} />
+            </tr>
+            <tr>
+                <td>Minor group</td>
+                <IPAEntry value="|" setSymbol={setSymbol} />
+            </tr>
+            <tr>
+                <td>Major group</td>
+                <IPAEntry value="‖" setSymbol={setSymbol} />
+            </tr>
+            <tr>
+                <td>Syllable boundary</td>
+                <IPAEntry value="." setSymbol={setSymbol} />
+            </tr>
+            <tr>
+                <td>Linking</td>
+                <IPAEntry value="a͜u" setSymbol={setSymbol} />
             </tr>
         </tbody>
     </table>;

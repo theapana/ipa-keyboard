@@ -27,10 +27,11 @@ export const keymap = {
     "y": {"base": "y", "lower": "ʏ"},
     "e": {"base": "e", "lower": "ɛ"},
     "o": {"base": "o", "slash": "ø", "lower": "ɔ", "round": "ɤ"},
-    "'": {"base": "'", "lower": "ˈ"}, // apostrophe => primary stress
-    ",": {"base": ",", "lower": "ˌ"}, // comma => secondary stress
-    ";": {"base": ";", "lower": "ː"}, // semicolon => length
     // "œ": {"base": "o"},
     // "ʌ": {"base": "o"},
     // "ɶ": {"base": "O"},
+    "'": { "base": "'", "lower": "ˈ", },
+    ",": { "base": ",", "lower": "ˌ", },
+    ";": { "base": ";", "lower": "ː", "raise": "ˑ",},
+    "\\": { "base": "\\", "lower": "‖",},   // not working..
 };
