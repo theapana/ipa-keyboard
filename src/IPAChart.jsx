@@ -108,9 +108,9 @@ function PulmonicChart({setSymbol}) {
             </tr>
             <tr>
                 <td>plosive</td>
-                <td colSpan="2" />
                 <IPAEntry value="p" setSymbol={setSymbol} />
                 <IPAEntry value="b" setSymbol={setSymbol} />
+                <td colSpan="2" />
                 <td colSpan="2" />
                 <IPAEntry value="t" setSymbol={setSymbol} />
                 <IPAEntry value="d" setSymbol={setSymbol} />
