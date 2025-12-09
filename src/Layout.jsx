@@ -5,6 +5,9 @@ import 'react-simple-keyboard/build/css/index.css';
 import {keymap} from "./keymap";
 import Key from "./Key";
 
+// [r] for retroflex
+// [o] for round
+
 export default function Layout() {
     const [layer, setLayer] = useState("base");
     return <div>
@@ -82,15 +85,28 @@ function IPAKeyboard({layer}) {
 function Modifiers() {
     return <div>
         <h1>Modifiers</h1>
+        <h2>Base</h2>
         <dl className="key-list">
-            <dt><Key value="/" /></dt>
-            <dd>slash [typographical]</dd>
-            <p />
             <dt><Key value="-" /></dt>
             <dd>lower; in a triple of "lower", "base", "raise", select "lower"</dd>
             <p />
             <dt><Key value="+" /></dt>
             <dd>raise; in a triple of "lower", "base", "raise", select "raise"</dd>
+            <p />
+        </dl>
+        <h2>Place/Manner Vowel</h2>
+        <dl className="key-list">
+            <dt><Key value="o" /></dt>
+            <dd>(un)round</dd>
+            <p />
+            <dt><Key value="-" /></dt>
+            <dd>lax</dd>
+            <p />
+        </dl>
+        <h2>Place/Manner Cons</h2>
+        <dl className="key-list">
+            <dt><Key value="g" /></dt>
+            <dd>velar</dd>
             <p />
             <dt><Key value="q" /></dt>
             <dd>uvular</dd>
@@ -103,6 +119,12 @@ function Modifiers() {
             <p />
             <dt><Key value="l" /></dt>
             <dd>lateral</dd>
+        </dl>
+        <h2>Typographical</h2>
+        <dl className="key-list">
+            <dt><Key value="/" /></dt>
+            <dd>slash</dd>
+            <p />
         </dl>
     </div>;
 }
