@@ -12,6 +12,19 @@ Why a re-arranged IPA chart?
   objectives and constraints from the actual IPA standard
 - make as many groupings as possible, and relate such groupings
   - group pulmonics by major place of articulation
+- making more used of left/right pairs that differ by a single binary feature
+  - plosives and fricatives do voiceless/voiced as a left/right pair
+  - some manners of articulation are inherently voiced, so this wastes space (physical space, but also logical, mental space)
+  - some, like nasals, don't really have an alt
+  - but others, like tap/flap vs trill, or rhotic vs lateral liquid pair perfectly
+  - tap/flap/trill:
+    - the lack of bilabial flap and lack of labio-dental trill is a physical, articulatory limitation  (in fact, they really ought to go together as the tap version of the trill)
+    - likewise retroflex flap with uvular trill
+    - generically, the 6 tap/flap/trills form 3 pairs of front, coronol, and back flap-trill units
+  - rhotic/lateral liquid:
+    - is a rhotic just an inverted liquid?
+    - liquid: tongue makes inverted-U shape, cross-sectionally
+    - rhotic: tongue makes U shape, cross-sectionally
 `
 
 const content2 = `
@@ -34,9 +47,9 @@ A closer look at approximants:
 
 - in close relation with a corresponding vowel, hence a.k.a. 'semi-vowel' (e.g.
   /i/ with /j/)
-- what is "labial-palatal" compared to just "palatal", but _round_ vs
-  _un-round_; which is exactly the distinction between pairs of vowels, such as
-  /i/ and /y/
+- what is "labial-palatal" compared to just "palatal", but _round_ vs _un-round_
+  - which is exactly the distinction between pairs of vowels, such as /i/ and /y/
+  - likewise, "labio-velar" is just round velar
 - therefore, place them above the vowels in the vowel chart
 - and lateral approximants too
 `
@@ -45,7 +58,7 @@ export default function IPAChart() {
     const [symbol, setSymbol] = useState('p');
     return <div>
         <h1>(Re-arranged) IPA Chart</h1>
-        <Markdown>{content}</Markdown>
+        <div className="p-4 w-4xl"><Markdown>{content}</Markdown></div>
         <br />
         <PulmonicChart setSymbol={setSymbol} />
         <Card value={symbol} />
@@ -53,9 +66,10 @@ export default function IPAChart() {
         <VowelChart setSymbol={setSymbol} />
         <NonPulmonicChart setSymbol={setSymbol} />
         <SymbolsChart setSymbol={setSymbol} />
-        <Markdown>{content_approx}</Markdown>
         <div className="m-6" />
-        <Markdown>{content2}</Markdown>
+        <div className="p-4 w-4xl"><Markdown>{content_approx}</Markdown></div>
+        <div className="m-6" />
+        <div className="p-4 w-4xl"><Markdown>{content2}</Markdown></div>
     </div>;
 }
 
@@ -169,13 +183,13 @@ function PulmonicChart({setSymbol}) {
             </tr>
             <tr>
                 <td>trill/tap/flap</td>
+                <td></td>
                 <IPAEntry value="ʙ" setSymbol={setSymbol} />
-                <td></td>
-                <td></td>
                 <IPAEntry value="ⱱ" setSymbol={setSymbol} />
+                <td></td>
                 <td colSpan="2"></td>
-                <IPAEntry value="r" setSymbol={setSymbol} />
                 <IPAEntry value="ɾ" setSymbol={setSymbol} />
+                <IPAEntry value="r" setSymbol={setSymbol} />
                 <td colSpan="2"></td>
                 <td></td>
                 <IPAEntry value="ɽ" setSymbol={setSymbol} />
