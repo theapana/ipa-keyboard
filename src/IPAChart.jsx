@@ -90,6 +90,13 @@ function Card({value}) {
     </div>;
 }
 
+function IPASpan({value, setSymbol}) {
+    return <div className="inline-block px-2"
+        onMouseEnter={() => {setSymbol(value);}}>
+        {value}
+    </div>;
+}
+
 function IPAEntry({value, colSpan, rowSpan, setSymbol}) {
     return <td colSpan={colSpan} rowSpan={rowSpan}
         onMouseEnter={() => {setSymbol(value);}}>
@@ -114,7 +121,7 @@ function PulmonicChart({setSymbol}) {
                 <td className="IPAPlace" colSpan="2">la-den</td>
                 <td className="IPAPlace" colSpan="2">den.</td>
                 <td className="IPAPlace" colSpan="2">alv.</td>
-                <td className="IPAPlace" colSpan="2">post-alv.</td>
+                <td className="IPAPlace" colSpan="2">p.alv.</td>
                 <td className="IPAPlace" colSpan="2">retro</td>
                 <td className="IPAPlace" colSpan="2">pal.</td>
                 <td className="IPAPlace" colSpan="2">vel.</td>
@@ -128,10 +135,10 @@ function PulmonicChart({setSymbol}) {
                 <IPAEntry value="p" setSymbol={setSymbol} />
                 <IPAEntry value="b" setSymbol={setSymbol} />
                 <td colSpan="2" />
-                <td colSpan="2" />
-                <IPAEntry value="t" setSymbol={setSymbol} />
-                <IPAEntry value="d" setSymbol={setSymbol} />
-                <td colSpan="2" />
+                <td colSpan="6">
+                    <IPASpan value="t" setSymbol={setSymbol} />
+                    <IPASpan value="d" setSymbol={setSymbol} />
+                </td>
                 <IPAEntry value="ʈ" setSymbol={setSymbol} />
                 <IPAEntry value="ɖ" setSymbol={setSymbol} />
                 <IPAEntry value="c" setSymbol={setSymbol} />
@@ -176,38 +183,39 @@ function PulmonicChart({setSymbol}) {
             <tr>
                 <IPAEntry value="ʍ" setSymbol={setSymbol} />
                 <td />
-                <td colSpan="2" />
-                <IPAEntry value="ɬ" setSymbol={setSymbol} />
-                <IPAEntry value="ɮ" setSymbol={setSymbol} />
-                <td colSpan="2" />
+                <td colSpan="6">
+                    <IPASpan value="ɬ" setSymbol={setSymbol} />
+                    <IPASpan value="ɮ" setSymbol={setSymbol} />
+                </td>
                 <IPAEntry value="ɕ" setSymbol={setSymbol} />
                 <IPAEntry value="ʑ" setSymbol={setSymbol} />
                 <IPAEntry value="ɧ" setSymbol={setSymbol} />
             </tr>
             <tr>
                 <td>trill/tap/flap</td>
-                <td></td>
-                <IPAEntry value="ʙ" setSymbol={setSymbol} />
-                <IPAEntry value="ⱱ" setSymbol={setSymbol} />
-                <td></td>
+                <td colSpan="4">
+                    <IPASpan value="ⱱ" setSymbol={setSymbol} />
+                    <IPASpan value="ʙ" setSymbol={setSymbol} />
+                </td>
+                <td colSpan="6">
+                    <IPASpan value="ɾ" setSymbol={setSymbol} />
+                    <IPASpan value="r" setSymbol={setSymbol} />
+                </td>
                 <td colSpan="2"></td>
-                <IPAEntry value="ɾ" setSymbol={setSymbol} />
-                <IPAEntry value="r" setSymbol={setSymbol} />
-                <td colSpan="2"></td>
-                <td></td>
                 <IPAEntry value="ɽ" setSymbol={setSymbol} />
+                <td></td>
                 <td colSpan="4"></td>
+                <td></td>
                 <IPAEntry value="ʀ" setSymbol={setSymbol} />
-                <td colSpan="1"></td>
                 <td colSpan="6"></td>
             </tr>
             <tr>
                 <td>liquid</td>
                 <td colSpan="4"></td>
-                <td colSpan="2" />
-                <IPAEntry value="ɹ" setSymbol={setSymbol} />
-                <IPAEntry value="l" setSymbol={setSymbol} />
-                <td colSpan="2" />
+                <td colSpan="6">
+                    <IPASpan value="ɹ" setSymbol={setSymbol} />
+                    <IPASpan value="l" setSymbol={setSymbol} />
+                </td>
                 <IPAEntry value="ɻ" setSymbol={setSymbol} />
                 <IPAEntry value="ɭ" setSymbol={setSymbol} />
                 <td colSpan="6"></td>
