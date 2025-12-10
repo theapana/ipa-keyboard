@@ -10,21 +10,6 @@ Why a re-arranged IPA chart?
 - those symbols left off the chart too often treated like an afterthought, and frustrating for learners
 - design for learning, not techinical specification of a standard; different
   objectives and constraints from the actual IPA standard
-- make as many groupings as possible, and relate such groupings
-  - group pulmonics by major place of articulation
-- making more used of left/right pairs that differ by a single binary feature
-  - plosives and fricatives do voiceless/voiced as a left/right pair
-  - some manners of articulation are inherently voiced, so this wastes space (physical space, but also logical, mental space)
-  - some, like nasals, don't really have an alt
-  - but others, like tap/flap vs trill, or rhotic vs lateral liquid pair perfectly
-  - tap/flap/trill:
-    - the lack of bilabial flap and lack of labio-dental trill is a physical, articulatory limitation  (in fact, they really ought to go together as the tap version of the trill)
-    - likewise retroflex flap with uvular trill
-    - generically, the 6 tap/flap/trills form 3 pairs of front, coronol, and back flap-trill units
-  - rhotic/lateral liquid:
-    - is a rhotic just an inverted liquid?
-    - liquid: tongue makes inverted-U shape, cross-sectionally
-    - rhotic: tongue makes U shape, cross-sectionally
 `
 
 const content2 = `
@@ -54,6 +39,24 @@ A closer look at approximants:
 - and lateral approximants too
 `
 
+const content_pairs = `
+- make as many groupings as possible, and relate such groupings
+  - group pulmonics by major place of articulation
+- making more used of left/right pairs that differ by a single binary feature
+  - plosives and fricatives do voiceless/voiced as a left/right pair
+  - some manners of articulation are inherently voiced, so this wastes space (physical space, but also logical, mental space)
+  - some, like nasals, don't really have an alt
+  - but others, like tap/flap vs trill, or rhotic vs lateral liquid pair perfectly
+  - tap/flap/trill:
+    - the lack of bilabial flap and lack of labio-dental trill is a physical, articulatory limitation  (in fact, they really ought to go together as the tap version of the trill)
+    - likewise retroflex flap with uvular trill
+    - generically, the 6 tap/flap/trills form 3 pairs of front, coronol, and back flap-trill units
+  - rhotic/lateral liquid:
+    - is a rhotic just an inverted liquid?
+    - liquid: tongue makes inverted-U shape, cross-sectionally
+    - rhotic: tongue makes U shape, cross-sectionally
+`
+
 export default function IPAChart() {
     const [symbol, setSymbol] = useState('p');
     return <div>
@@ -68,7 +71,7 @@ export default function IPAChart() {
         <SymbolsChart setSymbol={setSymbol} />
         <div className="m-6" />
         <div className="p-4 w-4xl"><Markdown>{content_approx}</Markdown></div>
-        <div className="m-6" />
+        <div className="p-4 w-4xl"><Markdown>{content_pairs}</Markdown></div>
         <div className="p-4 w-4xl"><Markdown>{content2}</Markdown></div>
     </div>;
 }
