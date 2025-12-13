@@ -2,8 +2,7 @@
     display: inline;
     margin-right: 20px;
 }
-.IPAChart tr,
-.IPAChart td,
+.IPAChart th, tr, td,
 .IPAChart {
     border-collapse: collapse;
     padding: 10px;

@@ -9,7 +9,7 @@
     @apply dark:bg-slate-900 dark:text-slate-500;
     @apply m-5;
   }
-  table, tbody, tr, td,
+  table, tbody, th, tr, td,
   .IPAChart, .IPACard {
     @apply border border-slate-400 dark:border-blue-950;
     @apply bg-white dark:bg-slate-900;
