@@ -68,10 +68,11 @@ export default function IPAChart() {
         <div className="m-6" />
         <VowelChart setSymbol={setSymbol} />
         <NonPulmonicChart setSymbol={setSymbol} />
-        <SymbolsChart setSymbol={setSymbol} />
+        <SuprasegmentalsChart setSymbol={setSymbol} />
         <div className="m-6" />
         <div className="p-4 w-4xl"><Markdown>{content_approx}</Markdown></div>
         <div className="p-4 w-4xl"><Markdown>{content_pairs}</Markdown></div>
+        <DiacriticsChart setSymbol={setSymbol} />
         <div className="p-4 w-4xl"><Markdown>{content2}</Markdown></div>
     </div>;
 }
@@ -341,19 +342,16 @@ function NonPulmonicChart({setSymbol}) {
                 <IPAEntry value="ǀ" setSymbol={setSymbol} />
                 <IPAEntry value="ɗ" setSymbol={setSymbol} />
                 <IPAEntry value="tʼ" setSymbol={setSymbol} />
-                <td />
             </tr>
             <tr>
                 <IPAEntry value="!" setSymbol={setSymbol} />
                 <IPAEntry value="ʄ" setSymbol={setSymbol} />
                 <IPAEntry value="sʼ" setSymbol={setSymbol} />
-                <td />
             </tr>
             <tr>
                 <IPAEntry value="ǂ" setSymbol={setSymbol} />
                 <IPAEntry value="ɠ" setSymbol={setSymbol} />
                 <IPAEntry value="kʼ" setSymbol={setSymbol} />
-                <td />
             </tr>
             <tr>
                 <IPAEntry value="ǁ" setSymbol={setSymbol} />
@@ -364,7 +362,7 @@ function NonPulmonicChart({setSymbol}) {
     </table>;
 }
 
-function SymbolsChart({setSymbol}) {
+function SuprasegmentalsChart({setSymbol}) {
     return <table className="IPAChart">
         <tbody>
             <tr>
@@ -405,6 +403,40 @@ function SymbolsChart({setSymbol}) {
             <tr>
                 <td>Linking</td>
                 <IPAEntry value="a͜u" setSymbol={setSymbol} />
+            </tr>
+        </tbody>
+    </table>;
+}
+
+function DiacriticsChart({setSymbol}) {
+    return <table className="IPAChart">
+        <thead><tr><th colspan="2">Diacritics</th></tr></thead>
+        <thead>
+            <tr>
+                <th scope="col">Phonation</th>
+                <th scope="col">Place</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <IPAEntry value="d̥ " setSymbol={setSymbol} />
+                <IPAEntry value="t̼" setSymbol={setSymbol} />
+            </tr>
+            <tr>
+                <IPAEntry value="t̬" setSymbol={setSymbol} />
+                <IPAEntry value="tʷ" setSymbol={setSymbol} />
+            </tr>
+            <tr>
+                <IPAEntry value="pʰ" setSymbol={setSymbol} />
+                <IPAEntry value="tʲ" setSymbol={setSymbol} />
+            </tr>
+            <tr>
+                <IPAEntry value="a̤" setSymbol={setSymbol} />
+                <IPAEntry value="tˠ" setSymbol={setSymbol} />
+            </tr>
+            <tr>
+                <IPAEntry value="a̰" setSymbol={setSymbol} />
+                <IPAEntry value="tˤ" setSymbol={setSymbol} />
             </tr>
         </tbody>
     </table>;
