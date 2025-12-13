@@ -525,4 +525,49 @@ export const symbol_info = {
         "description": "linking (absence of a break)",
         "tipa-code": "\\t*{au}",
     },
+    "ʘ": {
+        "glyph-name": "bull's eye",
+        "description": "bilabial click",
+        "tipa-code": "\\!o",
+    },
+    "ǀ": {
+        "glyph-name": "pipe",
+        "description": "dental click",
+        "tipa-code": "|",
+    },
+    "!": {
+        "glyph-name": "exclamation point",
+        "description": "(post)alveolar click",
+        "tipa-code": "!",
+    },
+    "ǂ": {
+        "glyph-name": "double-barred pipe",
+        "description": "palatoalveolar click",
+        "tipa-code": "\\textdoublebarpipe",
+    },
+    "ǁ": {
+        "glyph-name": "double pipe",
+        "description": "alveolar lateral click",
+        "tipa-code": "||",
+    },
+    "pʼ": {
+        "glyph-name": "lower-case p + apostrophe",
+        "description": "bilabial ejective",
+        "tipa-code": "-",
+    },
+    "tʼ": {
+        "glyph-name": "lower-case t + apostrophe",
+        "description": "dental/alveolar ejective",
+        "tipa-code": "-",
+    },
+    "sʼ": {
+        "glyph-name": "lower-case s + apostrophe",
+        "description": "alveolar fricative ejective",
+        "tipa-code": "-",
+    },
+    "kʼ": {
+        "glyph-name": "lower-case k + apostrophe",
+        "description": "velar ejective",
+        "tipa-code": "-",
+    },
 };

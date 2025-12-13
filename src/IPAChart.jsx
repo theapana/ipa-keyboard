@@ -328,32 +328,35 @@ function NonPulmonicChart({setSymbol}) {
                 <td colSpan="3">Non-Pulmonic Consonants</td>
             </tr>
             <tr>
-                <td>"Clicks"</td>
-                <td>"Impl."</td>
-                <td>"Eject."</td>
+                <td>Clicks</td>
+                <td>Impl.</td>
+                <td>Eject.</td>
             </tr>
             <tr>
                 <IPAEntry value="ʘ" setSymbol={setSymbol} />
                 <IPAEntry value="ɓ" setSymbol={setSymbol} />
-                <IPAEntry value="ʼ" setSymbol={setSymbol} />
+                <IPAEntry value="pʼ" setSymbol={setSymbol} />
             </tr>
             <tr>
                 <IPAEntry value="ǀ" setSymbol={setSymbol} />
                 <IPAEntry value="ɗ" setSymbol={setSymbol} />
+                <IPAEntry value="tʼ" setSymbol={setSymbol} />
                 <td />
             </tr>
             <tr>
-                <IPAEntry value="ǁ" setSymbol={setSymbol} />
+                <IPAEntry value="!" setSymbol={setSymbol} />
                 <IPAEntry value="ʄ" setSymbol={setSymbol} />
+                <IPAEntry value="sʼ" setSymbol={setSymbol} />
                 <td />
             </tr>
             <tr>
                 <IPAEntry value="ǂ" setSymbol={setSymbol} />
                 <IPAEntry value="ɠ" setSymbol={setSymbol} />
+                <IPAEntry value="kʼ" setSymbol={setSymbol} />
                 <td />
             </tr>
             <tr>
-                <IPAEntry value="ǃ" setSymbol={setSymbol} />
+                <IPAEntry value="ǁ" setSymbol={setSymbol} />
                 <IPAEntry value="ʛ" setSymbol={setSymbol} />
                 <td />
             </tr>
