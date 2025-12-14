@@ -408,35 +408,55 @@ function SuprasegmentalsChart({setSymbol}) {
     </table>;
 }
 
+function DiacriticsCard({symbol, example, name, setSymbol}) {
+    return <span>
+        {symbol}
+        <IPASpan value={example} setSymbol={setSymbol} />
+        {name}
+    </span>;
+}
+
 function DiacriticsChart({setSymbol}) {
     return <table className="IPAChart">
-        <thead><tr><th colspan="2">Diacritics</th></tr></thead>
+        <thead><tr><th colspan="4">Diacritics</th></tr></thead>
         <thead>
             <tr>
                 <th scope="col">Phonation</th>
                 <th scope="col">Place</th>
+                <th scope="col">Lingual</th>
+                <th scope="col">Release</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <IPAEntry value="d̥ " setSymbol={setSymbol} />
-                <IPAEntry value="t̼" setSymbol={setSymbol} />
+                <td><DiacriticsCard symbol=" ̥" example="d̥ " name="voiceless" setSymbol={setSymbol} /></td>
+                <td><DiacriticsCard symbol="ʷ" example="tʷ" name="labialized" setSymbol={setSymbol} /></td>
+                <td><DiacriticsCard symbol=" ̼" example="t̼" name="linguo-labial" setSymbol={setSymbol} /></td>
+                <td><DiacriticsCard symbol=" ̃" example="ẽ" name="nasalized" setSymbol={setSymbol} /></td>
             </tr>
             <tr>
-                <IPAEntry value="t̬" setSymbol={setSymbol} />
-                <IPAEntry value="tʷ" setSymbol={setSymbol} />
+                <td><DiacriticsCard symbol=" ̬" example="t̬" name="voiced" setSymbol={setSymbol} /></td>
+                <td><DiacriticsCard symbol="ʲ" example="tʲ" name="palatalized" setSymbol={setSymbol} /></td>
+                <td><DiacriticsCard symbol=" ̪" example="t̪" name="dental" setSymbol={setSymbol} /></td>
+                <td><DiacriticsCard symbol="ⁿ" example="dⁿ" name="nasal release" setSymbol={setSymbol} /></td>
             </tr>
             <tr>
-                <IPAEntry value="pʰ" setSymbol={setSymbol} />
-                <IPAEntry value="tʲ" setSymbol={setSymbol} />
+                <td><DiacriticsCard symbol="ʰ" example="pʰ" name="aspirated" setSymbol={setSymbol} /></td>
+                <td><DiacriticsCard symbol="ˠ" example="tˠ" name="velarized" setSymbol={setSymbol} /></td>
+                <td><DiacriticsCard symbol=" ̺" example="t̺" name="apical" setSymbol={setSymbol} /></td>
+                <td><DiacriticsCard symbol="ˡ" example="dˡ" name="lateral release" setSymbol={setSymbol} /></td>
             </tr>
             <tr>
-                <IPAEntry value="a̤" setSymbol={setSymbol} />
-                <IPAEntry value="tˠ" setSymbol={setSymbol} />
+                <td><DiacriticsCard symbol=" ̤" example="a̤" name="breathy voice" setSymbol={setSymbol} /></td>
+                <td><DiacriticsCard symbol="ˤ" example="tˤ" name="pharyngealized" setSymbol={setSymbol} /></td>
+                <td><DiacriticsCard symbol=" ̻" example="t̻" name="laminal" setSymbol={setSymbol} /></td>
+                <td><DiacriticsCard symbol=" ̚" example="d̚" name="no audible release" setSymbol={setSymbol} /></td>
             </tr>
             <tr>
-                <IPAEntry value="a̰" setSymbol={setSymbol} />
-                <IPAEntry value="tˤ" setSymbol={setSymbol} />
+                <td><DiacriticsCard symbol=" ̰" example="a̰" name="creaky voice" setSymbol={setSymbol} /></td>
+                <td><DiacriticsCard symbol="ʶ" example="tʶ" name="uvularized" setSymbol={setSymbol} /></td>
+                <td></td>
+                <td></td>
             </tr>
         </tbody>
     </table>;
